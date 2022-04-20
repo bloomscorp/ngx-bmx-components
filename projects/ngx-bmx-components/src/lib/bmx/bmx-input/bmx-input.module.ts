@@ -12,12 +12,11 @@ import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
 	declarations: [
-
-    BmxContentInputComponent,
-       BmxInputComponent,
-       BmxSelectInputComponent,
-       BmxTextAreaInputComponent
-  ],
+		BmxContentInputComponent,
+		BmxInputComponent,
+		BmxSelectInputComponent,
+		BmxTextAreaInputComponent
+	],
 	imports: [
 		CommonModule,
 		MatFormFieldModule,

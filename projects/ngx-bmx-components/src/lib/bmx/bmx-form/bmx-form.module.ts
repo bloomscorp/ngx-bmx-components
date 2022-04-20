@@ -10,6 +10,9 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 	declarations: [
 		BmxFormComponent
 	],
+	exports: [
+		BmxFormComponent
+	],
 	imports: [
 		CommonModule,
 		ReactiveFormsModule,

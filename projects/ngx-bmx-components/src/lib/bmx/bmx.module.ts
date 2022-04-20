@@ -7,9 +7,6 @@ import {BmxFormModule} from "./bmx-form/bmx-form.module";
 	declarations: [],
 	imports: [
 		CommonModule
-	],
-	exports: [
-		BmxFormModule
 	]
 })
 export class BmxModule {

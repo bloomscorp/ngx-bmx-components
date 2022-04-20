@@ -15,9 +15,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 		ReactiveFormsModule,
 		BmxInputModule,
 		FlexLayoutModule
-	],
-	exports: [
-		BmxFormComponent
 	]
 })
 export class BmxFormModule {

@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-bmx-components": {
+      "projectType": "library",
+      "root": "projects/ngx-bmx-components",
+      "sourceRoot": "projects/ngx-bmx-components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-bmx-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-bmx-components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-bmx-components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-bmx-components/src/test.ts",
+            "tsConfig": "projects/ngx-bmx-components/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-bmx-components/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-bmx-components"
 }

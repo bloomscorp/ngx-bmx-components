@@ -17,6 +17,9 @@ import {MatSelectModule} from "@angular/material/select";
 		BmxSelectInputComponent,
 		BmxTextAreaInputComponent
 	],
+	exports: [
+		BmxInputComponent
+	],
 	imports: [
 		CommonModule,
 		MatFormFieldModule,

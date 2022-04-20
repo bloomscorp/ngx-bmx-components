@@ -1,0 +1,34 @@
+<section class="m-4 md:m-8">
+	<p class="p-2 capitalize font-bold text-3xl">{{ data.title }}</p>
+	<p class="p-2 font-bold text-sm text-gray-400">{{ data.subTitle }}</p>
+	<!-- TODO: implement (ngSubmit) -->
+	<!-- TODO: take submit field as form data -->
+	<form [formGroup]="formGroup"
+		  [fxLayout.xs]="data.layout.xs.layout"
+		  [fxLayout.sm]="data.layout.sm.layout"
+		  [fxLayout.md]="data.layout.md.layout"
+		  [fxLayout.lg]="data.layout.lg.layout"
+		  [fxLayout.xl]="data.layout.xl.layout"
+		  [fxLayoutAlign.xs]="data.layout.xs.align"
+		  [fxLayoutAlign.sm]="data.layout.sm.align"
+		  [fxLayoutAlign.md]="data.layout.md.align"
+		  [fxLayoutAlign.lg]="data.layout.lg.align"
+		  [fxLayoutAlign.xl]="data.layout.xl.align"
+		  class="bmx-form my-3">
+		<div *ngFor="let container of data.layoutContainers; trackBy: trackLayoutContainer"
+			 fxLayout="row"
+			 fxLayoutAlign="start center"
+			 [ngClass]="container.classList">
+			<bmx-input *ngFor="let input of container.group.inputItems; trackBy: trackInputElement"
+						   [data]="input.inputItem"
+						   [formControl]="getFormControl(input.inputItem.name)"
+						   ngDefaultControl
+						   [fxFlex]="input.flex"
+						   [ngClass]="input.classList"
+						   class="px-2.5 py-2.5"></bmx-input>
+		</div>
+		<button type="submit" class="bmx-submit bg-teal-800 text-center w-24 h-12 text-sm border-4 text-white py-1 px-2 rounded-lg">
+			Submit
+		</button>
+	</form>
+</section>

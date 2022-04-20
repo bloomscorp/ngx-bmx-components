@@ -5,3 +5,5 @@
 export * from './lib/ngx-bmx-components.service';
 export * from './lib/ngx-bmx-components.component';
 export * from './lib/ngx-bmx-components.module';
+
+export * from './lib/bmx/bmx.module';

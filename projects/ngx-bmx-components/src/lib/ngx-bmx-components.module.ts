@@ -9,8 +9,7 @@ import {BmxFormModule} from "./bmx/bmx-form/bmx-form.module";
 	],
 	imports: [],
 	exports: [
-		NgxBmxComponentsComponent,
-		BmxFormModule
+		NgxBmxComponentsComponent
 	]
 })
 export class NgxBmxComponentsModule {

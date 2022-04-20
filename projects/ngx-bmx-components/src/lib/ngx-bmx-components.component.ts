@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'lib-ngx-bmx-components',
-  template: `
-    <p>
+	selector: 'lib-ngx-bmx-components',
+	template: `
+		<p>
       ngx-bmx-components works!
     </p>
-  `,
-  styles: [
-  ]
+	`,
+	styles: []
 })
 export class NgxBmxComponentsComponent implements OnInit {
 
-  constructor() { }
+	constructor() {
+	}
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
 }

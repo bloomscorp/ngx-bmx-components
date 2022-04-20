@@ -1,4 +1,4 @@
-import { BmxSimpleTextAreaInput } from './bmx-simple-text-area-input';
+import {BmxSimpleTextAreaInput} from './bmx-simple-text-area-input';
 
 describe('BmxTextAreaInput', () => {
   it('should create an instance', () => {

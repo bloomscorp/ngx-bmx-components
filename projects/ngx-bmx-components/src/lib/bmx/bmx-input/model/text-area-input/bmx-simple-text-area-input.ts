@@ -1,6 +1,5 @@
 import {AbstractBmxTextAreaInput} from "./abstract-bmx-text-area-input";
 import {MatFormFieldAppearance} from "@angular/material/form-field";
-import {BmxSelectInputItem} from "../../interface/bmx-select-input-item";
 import {BmxValidator} from "../../interface/bmx-validator";
 
 export class BmxSimpleTextAreaInput extends AbstractBmxTextAreaInput {

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BmxContentInputComponent } from './bmx-content-input.component';
+import {BmxContentInputComponent} from './bmx-content-input.component';
 
 describe('BmxContentInputComponent', () => {
   let component: BmxContentInputComponent;

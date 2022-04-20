@@ -1,4 +1,4 @@
-import { BmxEmailInput } from './bmx-email-input';
+import {BmxEmailInput} from './bmx-email-input';
 
 describe('BmxEmailInput', () => {
   it('should create an instance', () => {

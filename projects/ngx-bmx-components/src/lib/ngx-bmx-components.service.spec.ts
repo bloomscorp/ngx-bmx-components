@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { NgxBmxComponentsService } from './ngx-bmx-components.service';
+import {NgxBmxComponentsService} from './ngx-bmx-components.service';
 
 describe('NgxBmxComponentsService', () => {
   let service: NgxBmxComponentsService;

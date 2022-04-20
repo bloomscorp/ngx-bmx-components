@@ -1,4 +1,4 @@
-import { BmxMaxLengthValidator } from './bmx-max-length-validator';
+import {BmxMaxLengthValidator} from './bmx-max-length-validator';
 
 describe('BmxMaxLengthValidator', () => {
   it('should create an instance', () => {

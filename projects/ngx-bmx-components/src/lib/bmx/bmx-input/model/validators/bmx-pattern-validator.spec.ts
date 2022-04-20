@@ -1,4 +1,4 @@
-import { BmxPatternValidator } from './bmx-pattern-validator';
+import {BmxPatternValidator} from './bmx-pattern-validator';
 
 describe('BmxPatternValidator', () => {
   it('should create an instance', () => {

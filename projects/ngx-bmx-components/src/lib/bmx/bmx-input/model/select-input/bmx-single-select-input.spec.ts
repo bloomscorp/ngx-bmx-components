@@ -1,4 +1,4 @@
-import { BmxSingleSelectInput } from './bmx-single-select-input';
+import {BmxSingleSelectInput} from './bmx-single-select-input';
 
 describe('BmxSingleSelectInput', () => {
   it('should create an instance', () => {

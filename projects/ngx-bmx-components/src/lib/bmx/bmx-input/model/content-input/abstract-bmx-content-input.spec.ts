@@ -1,4 +1,4 @@
-import { AbstractBmxContentInput } from './abstract-bmx-content-input';
+import {AbstractBmxContentInput} from './abstract-bmx-content-input';
 
 describe('AbstractBmxContentInput', () => {
   it('should create an instance', () => {

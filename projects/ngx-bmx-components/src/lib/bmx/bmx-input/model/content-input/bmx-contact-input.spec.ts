@@ -1,4 +1,4 @@
-import { BmxContactInput } from './bmx-contact-input';
+import {BmxContactInput} from './bmx-contact-input';
 
 describe('BmxContactInput', () => {
   it('should create an instance', () => {

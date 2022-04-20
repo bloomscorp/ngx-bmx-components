@@ -2,7 +2,6 @@ import {AbstractBmxSelectInput} from "./abstract-bmx-select-input";
 import {MatFormFieldAppearance} from "@angular/material/form-field";
 import {BmxValidator} from "../../interface/bmx-validator";
 import {BmxSelectInput} from "../../interface/bmx-select-input";
-import {BmxSelectInputExtendedItem} from "../../interface/bmx-select-input-extended-item";
 import {BmxSelectInputItem} from "../../interface/bmx-select-input-item";
 
 export class BmxSingleSelectInput extends AbstractBmxSelectInput {

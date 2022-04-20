@@ -1,7 +1,6 @@
 import {BmxInput} from "./bmx-input";
 import {MatFormFieldAppearance} from "@angular/material/form-field";
 import {BmxSelectInputType} from "./bmx-input-element-types";
-import {BmxSelectInputItem} from "./bmx-select-input-item";
 import {BmxSelectInputExtendedItem} from "./bmx-select-input-extended-item";
 
 export interface BmxSelectInput extends BmxInput {

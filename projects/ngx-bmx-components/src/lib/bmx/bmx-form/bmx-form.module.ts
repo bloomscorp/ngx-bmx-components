@@ -1,18 +1,21 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { BmxFormComponent } from './bmx-form/bmx-form.component';
+import {BmxFormComponent} from './bmx-form/bmx-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {BmxInputModule} from "../bmx-input/bmx-input.module";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
-  declarations: [
-    BmxFormComponent
-  ],
+	declarations: [
+		BmxFormComponent
+	],
 	imports: [
 		CommonModule,
 		ReactiveFormsModule,
-		BmxInputModule
+		BmxInputModule,
+		FlexLayoutModule
 	]
 })
-export class BmxFormModule { }
+export class BmxFormModule {
+}

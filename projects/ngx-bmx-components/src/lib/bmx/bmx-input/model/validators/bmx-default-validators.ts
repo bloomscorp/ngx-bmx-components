@@ -3,6 +3,7 @@ import {BmxRequiredValidator} from "./bmx-required-validator";
 import {BmxMinLengthValidator} from "./bmx-min-length-validator";
 import {BmxPatternValidator} from "./bmx-pattern-validator";
 import {Validators} from "@angular/forms";
+import {BmxDefaultEmailValidator} from "./bmx-default-email-validator";
 
 export class BmxDefaultValidators {
 
@@ -16,11 +17,7 @@ export class BmxDefaultValidators {
 
 	public static emailValidator: BmxValidator[] = [
 		new BmxRequiredValidator(),
-		{
-			errorCode: 'email',
-			message: 'Please enter a valid email address',
-			validator: Validators.email
-		},
+		new BmxDefaultEmailValidator(),
 		new BmxPatternValidator(this._emailRegEx)
 	]
 }

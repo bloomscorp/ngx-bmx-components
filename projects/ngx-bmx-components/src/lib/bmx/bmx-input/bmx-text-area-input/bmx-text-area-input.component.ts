@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {BmxTextAreaInput} from "../interface/bmx-text-area-input";
+import {FormControl} from "@angular/forms";
+import {BmxInputElement} from "../interface/bmx-input-element-types";
 
 @Component({
   selector: 'bmx-text-area-input',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BmxTextAreaInputComponent implements OnInit {
 
-  constructor() { }
+	@Input()
+	public bmxData: BmxInputElement = {} as BmxInputElement;
 
-  ngOnInit(): void {
-  }
+	@Input()
+	public formControl: FormControl = {} as FormControl;
 
+	public data: BmxTextAreaInput = {} as BmxTextAreaInput;
+
+	constructor() {
+	}
+
+	ngOnInit(): void {
+		this.data = <BmxTextAreaInput>this.bmxData;
+	}
 }

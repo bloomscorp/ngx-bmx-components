@@ -1,1 +1,18 @@
-<p>bmx-text-area-input works!</p>
+<mat-form-field class="bmx-input w-full text-sm" [appearance]="data.appearance">
+	<mat-label>{{ data.label }}</mat-label>
+	<textarea [name]="data.name"
+			  matInput
+			  [formControl]="formControl"
+			  [rows]="data.rows"
+			  [cols]="data.cols"
+			  [placeholder]="data.placeholder"
+			  [readonly]="data.readOnly">
+	</textarea>
+	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
+	<mat-error *ngFor="let error of data.validators">
+		<ng-container *ngIf="(formControl.pristine || formControl.dirty)
+							&& formControl.hasError(error.errorCode)">
+			{{ error.message }}
+		</ng-container>
+	</mat-error>
+</mat-form-field>

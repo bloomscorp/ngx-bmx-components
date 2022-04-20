@@ -1,1 +1,15 @@
-<p>bmx-select-input works!</p>
+<mat-form-field class="bmx-input w-full text-sm" [appearance]="data.appearance">
+	<mat-label>{{ data.label }}</mat-label>
+	<mat-select [formControl]="formControl">
+		<mat-option *ngFor="let item of data.entries; trackBy: trackItems"
+					[value]="item.value"
+					[disabled]="item.disabled">{{ item.title }}</mat-option>
+	</mat-select>
+	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
+	<mat-error *ngFor="let error of data.validators">
+		<ng-container *ngIf="(formControl.pristine || formControl.dirty)
+							&& formControl.hasError(error.errorCode)">
+			{{ error.message }}
+		</ng-container>
+	</mat-error>
+</mat-form-field>

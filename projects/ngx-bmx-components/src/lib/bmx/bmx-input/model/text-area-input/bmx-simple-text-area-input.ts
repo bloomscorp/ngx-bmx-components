@@ -3,7 +3,7 @@ import {MatFormFieldAppearance} from "@angular/material/form-field";
 import {BmxSelectInputItem} from "../../interface/bmx-select-input-item";
 import {BmxValidator} from "../../interface/bmx-validator";
 
-export class BmxTextAreaInput extends AbstractBmxTextAreaInput {
+export class BmxSimpleTextAreaInput extends AbstractBmxTextAreaInput {
 	public constructor (
 		appearance: MatFormFieldAppearance = 'outline',
 		disabled: boolean = false,
@@ -38,9 +38,9 @@ export class BmxTextAreaInput extends AbstractBmxTextAreaInput {
 		validators: BmxValidator[] = [],
 		rows: number = 1,
 		cols: number = 50
-	): BmxTextAreaInput {
+	): BmxSimpleTextAreaInput {
 
-		return new BmxTextAreaInput(
+		return new BmxSimpleTextAreaInput(
 			'outline',
 			false,
 			label,

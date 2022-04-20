@@ -1,1 +1,12 @@
-<p>bmx-input works!</p>
+<ng-container [ngSwitch]="data.inputType">
+	<ng-container *ngSwitchCase="0">
+		<bmx-content-input [bmxData]="data" [formControl]="formControl" ngDefaultControl></bmx-content-input>
+	</ng-container>
+	<ng-container *ngSwitchCase="1">
+		<bmx-select-input [bmxData]="data" [formControl]="formControl" ngDefaultControl></bmx-select-input>
+	</ng-container>
+	<ng-container *ngSwitchCase="3">
+		<bmx-text-area-input [bmxData]="data" [formControl]="formControl" ngDefaultControl></bmx-text-area-input>
+	</ng-container>
+	<ng-container *ngSwitchDefault></ng-container>
+</ng-container>

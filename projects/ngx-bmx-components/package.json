@@ -1,6 +1,6 @@
 {
 	"name": "ngx-bmx-components",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"description": "Collection of angular UI components developed for Bloomscorp's internal projects",
 	"author": {
 		"name": "Debabrata Acharya",
@@ -11,7 +11,7 @@
 	"peerDependencies": {
 		"@angular/common": "^13.3.0",
 		"@angular/core": "^13.3.0",
-		"bmx-pastebox": "^1.0.3"
+		"bmx-pastebox": "^1.0.4"
 	},
 	"dependencies": {
 		"tslib": "^2.3.0"

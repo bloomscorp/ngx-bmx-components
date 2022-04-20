@@ -1,2 +1,4 @@
-export interface BmxLayoutFxMD {
+import {BmxFxLayout} from "./bmx-fx-layout";
+
+export interface BmxLayoutFxMD extends BmxFxLayout {
 }

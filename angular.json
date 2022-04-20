@@ -12,7 +12,7 @@
 			},
 			"root": "projects/ngx-bmx-components",
 			"sourceRoot": "projects/ngx-bmx-components/src",
-			"prefix": "bmx",
+			"prefix": "",
 			"architect": {
 				"build": {
 					"builder": "@angular-devkit/build-angular:ng-packagr",

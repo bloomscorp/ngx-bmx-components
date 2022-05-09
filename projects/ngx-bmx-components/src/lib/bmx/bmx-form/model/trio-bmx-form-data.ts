@@ -1,4 +1,3 @@
-//TODO: implement this
 import {SimpleBmxFormData} from "./simple-bmx-form-data";
 import {BmxInputElement} from "../../bmx-input/interface/bmx-input-element-types";
 import {BmxInput} from "../../bmx-input/interface/bmx-input";

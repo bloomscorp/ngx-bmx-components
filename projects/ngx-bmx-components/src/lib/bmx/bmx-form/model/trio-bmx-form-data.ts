@@ -48,18 +48,6 @@ export class TrioBmxFormData extends SimpleBmxFormData {
 		};
 	}
 
-	private static prepareDuoRowLayout(
-		id1: number, input1: BmxInputElement,
-		id2: number, input2: BmxInputElement,
-	): BmxRowLayout {
-		return {
-			inputItems: [
-				TrioBmxFormData.prepareRowItem(id1, input1),
-				TrioBmxFormData.prepareRowItem(id2, input2),
-			]
-		};
-	}
-
 	private static prepareTrioRowLayouts(inputs: BmxInputElement[]): BmxRowLayout[] {
 
 		const layouts: BmxRowLayout[] = [];

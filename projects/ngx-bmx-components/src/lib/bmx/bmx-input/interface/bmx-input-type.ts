@@ -2,5 +2,6 @@ export enum BmxInputType {
 	CONTENT,
 	SELECT,
 	RADIO,
-	TEXT_AREA
+	TEXT_AREA,
+	IMAGE
 }

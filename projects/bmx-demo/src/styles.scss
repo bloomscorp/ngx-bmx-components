@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use '@angular/material/theming' as mat-theme;
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@include mat.core();
+
+$bmx-demo-theme-primary: mat.define-palette(mat.$red-palette);
+$bmx-demo-theme-accent: mat.define-palette(mat.$gray-palette, A200, A100, A400);
+$bmx-demo-theme-warn: mat.define-palette(mat.$pink-palette);
+
+$bmx-demo-theme: mat.define-light-theme((
+	color: (
+		primary: $bmx-demo-theme-primary,
+		accent: $bmx-demo-theme-accent,
+		warn: $bmx-demo-theme-warn,
+	)
+));
+
+$bmx-demo-dark-theme: mat.define-dark-theme((
+	color: (
+		primary: $bmx-demo-theme-primary,
+		accent: $bmx-demo-theme-accent,
+		warn: $bmx-demo-theme-warn,
+	)
+));
+
+@include mat.all-component-themes($bmx-demo-theme);

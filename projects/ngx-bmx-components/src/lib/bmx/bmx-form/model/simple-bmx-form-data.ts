@@ -6,7 +6,7 @@ import {BmxSubmitButton} from "../interface/bmx-submit-button";
 
 export class SimpleBmxFormData extends AbstractBmxFormData {
 
-	private static readonly DEFAULT_FORM_SUBMIT: BmxSubmitButton = {
+	public static readonly DEFAULT_FORM_SUBMIT: BmxSubmitButton = {
 		title: 'submit',
 		classList: ['bmx-form-submit-button__default'],
 		onSubmit: () => console.error('BmxSubmitButton#onSubmit is not implemented!')

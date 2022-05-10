@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {BmxFormData} from "../../../../../../../dist/ngx-bmx-components/lib/bmx/bmx-form/interface/bmx-form-data";
+import {DemoBmxFormData} from "../model/demo-bmx-form-data";
 
 @Component({
-  selector: 'app-bmx-form-demo',
-  templateUrl: './bmx-form-demo.component.html',
-  styleUrls: ['./bmx-form-demo.component.scss']
+	selector: 'app-bmx-form-demo',
+	templateUrl: './bmx-form-demo.component.html',
+	styleUrls: ['./bmx-form-demo.component.scss']
 })
 export class BmxFormDemoComponent implements OnInit {
 
-  constructor() { }
+	public contactForm: BmxFormData = DemoBmxFormData.contactForm;
 
-  ngOnInit(): void {
-  }
+	constructor() {
+	}
+
+	ngOnInit(): void {
+	}
 
 }

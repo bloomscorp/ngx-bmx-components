@@ -12,7 +12,7 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 		title: string,
 		subTitle: string,
 		inputs: BmxInputElement[],
-		submit: BmxSubmitButton,
+		submit: BmxSubmitButton = SimpleBmxFormData.DEFAULT_FORM_SUBMIT
 	) {
 		TupleBmxFormData.validateInputs(inputs);
 		super(

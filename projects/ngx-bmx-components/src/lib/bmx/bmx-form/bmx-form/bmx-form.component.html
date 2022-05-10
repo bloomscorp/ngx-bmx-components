@@ -1,8 +1,6 @@
 <section class="m-4 md:m-8">
 	<p class="p-2 capitalize font-bold text-3xl">{{ data.title }}</p>
 	<p class="p-2 font-bold text-sm text-gray-400">{{ data.subTitle }}</p>
-	<!-- TODO: implement (ngSubmit) -->
-	<!-- TODO: take submit field as form data -->
 	<form [formGroup]="formGroup"
 		  [fxLayout.xs]="data.layout.xs.layout"
 		  [fxLayout.sm]="data.layout.sm.layout"
@@ -27,8 +25,11 @@
 						   [ngClass]="input.classList"
 						   class="px-2.5 py-2.5"></bmx-input>
 		</div>
-		<button type="submit" class="bmx-submit bg-teal-800 text-center w-24 h-12 text-sm border-4 text-white py-1 px-2 rounded-lg">
-			Submit
+		<button type="submit"
+				(submit)="data.submit.onSubmit"
+				[ngClass]="data.submit.classList"
+				class="bmx-form-submit-button">
+			{{ data.submit.title }}
 		</button>
 	</form>
 </section>

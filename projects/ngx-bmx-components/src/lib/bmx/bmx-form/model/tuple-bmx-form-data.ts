@@ -4,6 +4,7 @@ import {BmxRowLayout} from "../../bmx-layout/interface/bmx-row-layout";
 import {BmxRowItem} from "../../bmx-layout/interface/bmx-row-item";
 import {BmxInputElement} from "../../bmx-input/interface/bmx-input-element-types";
 import {arrayEmpty} from 'bmx-pastebox';
+import {BmxSubmitButton} from "../interface/bmx-submit-button";
 
 export class TupleBmxFormData extends SimpleBmxFormData {
 
@@ -11,14 +12,14 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 		title: string,
 		subTitle: string,
 		inputs: BmxInputElement[],
-		onSubmit: () => void
+		submit: BmxSubmitButton,
 	) {
 		TupleBmxFormData.validateInputs(inputs);
 		super(
 			title,
 			subTitle,
 			TupleBmxFormData.prepareTupleRowLayouts(inputs),
-			onSubmit
+			submit
 		);
 	}
 

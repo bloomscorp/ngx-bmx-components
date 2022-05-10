@@ -8,13 +8,15 @@ export class SimpleBmxFormData extends AbstractBmxFormData {
 	public constructor(
 		title: string,
 		subTitle: string,
-		rowLayouts: BmxRowLayout[]
+		rowLayouts: BmxRowLayout[],
+		onSubmit: () => void
 	) {
 		SimpleBmxFormData.validateRows(rowLayouts);
 		super(
 			title,
 			subTitle,
-			SimpleBmxFormData.prepareGroups(rowLayouts)
+			SimpleBmxFormData.prepareGroups(rowLayouts),
+			onSubmit
 		);
 	}
 

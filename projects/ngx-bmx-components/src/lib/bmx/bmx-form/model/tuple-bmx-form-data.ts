@@ -10,13 +10,15 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 	public constructor(
 		title: string,
 		subTitle: string,
-		inputs: BmxInputElement[]
+		inputs: BmxInputElement[],
+		onSubmit: () => void
 	) {
 		TupleBmxFormData.validateInputs(inputs);
 		super(
 			title,
 			subTitle,
-			TupleBmxFormData.prepareTupleRowLayouts(inputs)
+			TupleBmxFormData.prepareTupleRowLayouts(inputs),
+			onSubmit
 		);
 	}
 

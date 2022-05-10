@@ -15,5 +15,6 @@ export interface BmxFormData {
 	title: string;
 	subTitle: string;
 	layoutContainers: BmxLayoutContainer[],
+	onSubmit: () => void;
 	layout: BmxLayout;
 }

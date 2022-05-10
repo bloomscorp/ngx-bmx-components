@@ -44,6 +44,7 @@ export abstract class AbstractBmxFormData implements BmxFormData {
 		public title: string,
 		public subTitle: string,
 		public layoutContainers: BmxLayoutContainer[],
+		public onSubmit: () => void,
 		public layout: BmxLayout = AbstractBmxFormData.DEFAULT_LAYOUT
 	) {
 	}

@@ -1,6 +1,6 @@
-import {BmxFormData} from "../../../../../../../dist/ngx-bmx-components/lib/bmx/bmx-form/interface/bmx-form-data";
 import {TupleBmxFormData} from "ngx-bmx-components";
 import {DemoBmxInput} from "./demo-bmx-input";
+import {BmxFormData} from "ngx-bmx-components/lib/bmx/bmx-form/interface/bmx-form-data";
 
 export class DemoBmxFormData {
 

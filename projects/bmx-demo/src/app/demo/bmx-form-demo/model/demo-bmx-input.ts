@@ -1,9 +1,11 @@
-import {BmxContentInput} from "../../../../../../../dist/ngx-bmx-components/lib/bmx/bmx-input/interface/bmx-content-input";
-import {BmxContactInput, BmxSimpleTextAreaInput, BmxSingleSelectInput, BmxTextInput} from "ngx-bmx-components";
-import {BmxTextAreaInput} from "../../../../../../../dist/ngx-bmx-components/lib/bmx/bmx-input/interface/bmx-text-area-input";
-import {BmxSelectInput} from "../../../../../../../dist/ngx-bmx-components/lib/bmx/bmx-input/interface/bmx-select-input";
+import {BmxContentInput} from '../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/interface/bmx-content-input';
+import {BmxTextAreaInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/interface/bmx-text-area-input";
+import {BmxSelectInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/interface/bmx-select-input";
 import {DemoBmxValidator} from "./demo-bmx-validator";
 import {DemoBmxDropdown} from "./demo-bmx-dropdown";
+import {BmxTextInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/content-input/bmx-text-input";
+import {BmxContactInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/content-input/bmx-contact-input";
+import {BmxSingleSelectInput} from "ngx-bmx-components";
 
 export class DemoBmxInput {
 
@@ -11,6 +13,7 @@ export class DemoBmxInput {
 		'Name',
 		'Enter your name',
 		'name',
+		'',
 		'Joe Billy',
 		[
 			DemoBmxValidator.required,
@@ -22,6 +25,7 @@ export class DemoBmxInput {
 		'Phone Number',
 		'Enter your phone number',
 		'phone',
+		'',
 		'+919831126234'
 	);
 

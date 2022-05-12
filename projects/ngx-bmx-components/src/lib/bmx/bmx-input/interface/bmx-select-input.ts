@@ -7,4 +7,5 @@ export interface BmxSelectInput extends BmxInput {
 	appearance: MatFormFieldAppearance;
 	type: BmxSelectInputType;
 	entries: BmxSelectInputExtendedItem[];
+	value: string | number;
 }

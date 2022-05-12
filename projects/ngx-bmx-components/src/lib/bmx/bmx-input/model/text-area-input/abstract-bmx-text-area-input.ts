@@ -15,6 +15,7 @@ export class AbstractBmxTextAreaInput implements BmxTextAreaInput {
 		public cols: number,
 		public hint: string,
 		public name: string,
+		public value: string,
 		public placeholder: string,
 		public readOnly: boolean = false,
 		public validators: BmxValidator[] = []

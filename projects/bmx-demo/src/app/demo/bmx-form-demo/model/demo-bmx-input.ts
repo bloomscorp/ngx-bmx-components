@@ -5,7 +5,8 @@ import {DemoBmxValidator} from "./demo-bmx-validator";
 import {DemoBmxDropdown} from "./demo-bmx-dropdown";
 import {BmxTextInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/content-input/bmx-text-input";
 import {BmxContactInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/content-input/bmx-contact-input";
-import {BmxSingleSelectInput} from "ngx-bmx-components";
+import {BmxSingleSelectInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/select-input/bmx-single-select-input";
+import {BmxSimpleTextAreaInput} from '../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/text-area-input/bmx-simple-text-area-input';
 
 export class DemoBmxInput {
 
@@ -33,6 +34,7 @@ export class DemoBmxInput {
 		'Gender',
 		'Select your gender',
 		'gender',
+		'',
 		'Male | Female | Other',
 		DemoBmxDropdown.genderDropdown
 	);

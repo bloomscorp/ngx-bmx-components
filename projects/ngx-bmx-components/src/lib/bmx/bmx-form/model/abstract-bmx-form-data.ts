@@ -4,6 +4,7 @@ import {BmxLayoutFxXS} from "../../bmx-layout/interface/bmx-layout-fx-xs";
 import {BmxLayoutFxSM} from "../../bmx-layout/interface/bmx-layout-fx-sm";
 import {BmxLayoutFxMD} from "../../bmx-layout/interface/bmx-layout-fx-md";
 import {BmxLayoutContainer} from "../../bmx-layout/interface/bmx-layout-container";
+import {BmxSubmitButton} from "../interface/bmx-submit-button";
 
 export abstract class AbstractBmxFormData implements BmxFormData {
 
@@ -44,6 +45,7 @@ export abstract class AbstractBmxFormData implements BmxFormData {
 		public title: string,
 		public subTitle: string,
 		public layoutContainers: BmxLayoutContainer[],
+		public submit: BmxSubmitButton,
 		public layout: BmxLayout = AbstractBmxFormData.DEFAULT_LAYOUT
 	) {
 	}

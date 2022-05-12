@@ -2,19 +2,28 @@ import {AbstractBmxFormData} from "./abstract-bmx-form-data";
 import {BmxRowLayout} from "../../bmx-layout/interface/bmx-row-layout";
 import {BmxLayoutContainer} from "../../bmx-layout/interface/bmx-layout-container";
 import {arrayEmpty} from "bmx-pastebox";
+import {BmxSubmitButton} from "../interface/bmx-submit-button";
 
 export class SimpleBmxFormData extends AbstractBmxFormData {
+
+	public static readonly DEFAULT_FORM_SUBMIT: BmxSubmitButton = {
+		title: 'submit',
+		classList: ['bmx-form-submit-button__default'],
+		onSubmit: () => console.error('BmxSubmitButton#onSubmit is not implemented!')
+	};
 
 	public constructor(
 		title: string,
 		subTitle: string,
-		rowLayouts: BmxRowLayout[]
+		rowLayouts: BmxRowLayout[],
+		submit: BmxSubmitButton = SimpleBmxFormData.DEFAULT_FORM_SUBMIT
 	) {
 		SimpleBmxFormData.validateRows(rowLayouts);
 		super(
 			title,
 			subTitle,
-			SimpleBmxFormData.prepareGroups(rowLayouts)
+			SimpleBmxFormData.prepareGroups(rowLayouts),
+			submit
 		);
 	}
 

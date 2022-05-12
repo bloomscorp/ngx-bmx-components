@@ -1,5 +1,6 @@
 import {BmxLayout} from "../../bmx-layout/interface/bmx-layout";
 import {BmxLayoutContainer} from "../../bmx-layout/interface/bmx-layout-container";
+import {BmxSubmitButton} from "./bmx-submit-button";
 
 /**
  * Prepares the form data
@@ -14,6 +15,7 @@ import {BmxLayoutContainer} from "../../bmx-layout/interface/bmx-layout-containe
 export interface BmxFormData {
 	title: string;
 	subTitle: string;
-	layoutContainers: BmxLayoutContainer[],
+	layoutContainers: BmxLayoutContainer[];
+	submit: BmxSubmitButton;
 	layout: BmxLayout;
 }

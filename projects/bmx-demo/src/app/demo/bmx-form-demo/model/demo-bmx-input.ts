@@ -43,6 +43,7 @@ export class DemoBmxInput {
 		'Text Area',
 		'',
 		'text-area',
+		'',
 		'Enter some text',
 		[
 			DemoBmxValidator.nameMinLength

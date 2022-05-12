@@ -15,6 +15,7 @@ export abstract class AbstractBmxContentInput implements BmxContentInput {
 		public label: string,
 		public hint: string,
 		public name: string,
+		public value: string,
 		public placeholder: string,
 		public readOnly: boolean = false,
 		public validators: BmxValidator[] = []

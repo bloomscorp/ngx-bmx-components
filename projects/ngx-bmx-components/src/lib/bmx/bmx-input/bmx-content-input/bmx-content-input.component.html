@@ -5,6 +5,7 @@
 		   matInput
 		   [formControl]="formControl"
 		   [placeholder]="data.placeholder"
+		   [value]="data.value"
 		   [readonly]="data.readOnly">
 	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
 	<mat-error *ngFor="let error of data.validators">

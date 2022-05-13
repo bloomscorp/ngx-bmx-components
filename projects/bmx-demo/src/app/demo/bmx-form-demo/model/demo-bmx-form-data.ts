@@ -18,7 +18,7 @@ export class DemoBmxFormData {
 			title: 'submit',
 			classList: [],
 			onSubmit: (formGroup: FormGroup) => {
-
+				console.log(formGroup);
 			}
 		}
 	);

@@ -14,7 +14,7 @@ export class DemoBmxInput {
 		'Name',
 		'Enter your name',
 		'name',
-		'Sajib',
+		'Sajib Acharya',
 		'Joe Billy',
 		[
 			DemoBmxValidator.required,

@@ -12,6 +12,7 @@
 		  [fxLayoutAlign.md]="data.layout.md.align"
 		  [fxLayoutAlign.lg]="data.layout.lg.align"
 		  [fxLayoutAlign.xl]="data.layout.xl.align"
+		  (ngSubmit)="formSubmit()"
 		  class="bmx-form my-3">
 		<div *ngFor="let container of data.layoutContainers; trackBy: trackLayoutContainer"
 			 fxLayout="row"
@@ -26,7 +27,6 @@
 						   class="px-2.5 py-2.5"></bmx-input>
 		</div>
 		<button type="submit"
-				(submit)="formSubmit()"
 				[ngClass]="data.submit.classList"
 				class="bmx-form-submit-button">
 			{{ data.submit.title }}

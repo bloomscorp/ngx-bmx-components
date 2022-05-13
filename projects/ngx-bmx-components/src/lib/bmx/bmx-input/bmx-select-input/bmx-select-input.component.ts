@@ -24,7 +24,7 @@ export class BmxSelectInputComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.data = <BmxSelectInput>this.bmxData;
-		this.formControl.setValue(this.data.value.value);
+		setTimeout(() => this.formControl.setValue(this.data.value.value), 0);
 	}
 
 	// TODO: open this to API access

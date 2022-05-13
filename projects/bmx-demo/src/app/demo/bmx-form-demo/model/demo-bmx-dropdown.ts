@@ -1,4 +1,4 @@
-import {BmxSelectInputItem} from "../../../../../../../dist/ngx-bmx-components/lib/bmx/bmx-input/interface/bmx-select-input-item";
+import {BmxSelectInputItem} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/interface/bmx-select-input-item";
 
 export class DemoBmxDropdown {
 

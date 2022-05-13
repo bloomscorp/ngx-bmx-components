@@ -23,5 +23,6 @@ export class BmxContentInputComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.data = <BmxContentInput>this.bmxData;
+		this.formControl.setValue(this.data.value);
 	}
 }

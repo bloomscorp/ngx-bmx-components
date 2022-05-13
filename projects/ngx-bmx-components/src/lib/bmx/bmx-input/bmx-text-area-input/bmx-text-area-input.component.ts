@@ -23,5 +23,6 @@ export class BmxTextAreaInputComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.data = <BmxTextAreaInput>this.bmxData;
+		this.formControl.setValue(this.data.value);
 	}
 }

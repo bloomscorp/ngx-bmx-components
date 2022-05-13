@@ -37,6 +37,7 @@ export class BmxFormComponent implements OnInit {
 	}
 
 	public formSubmit(): void {
+		// TODO: validate before form submission -> make it optional
 		this.data.submit.onSubmit(this.formGroup);
 	}
 

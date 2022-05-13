@@ -14,7 +14,7 @@ export class DemoBmxInput {
 		'Name',
 		'Enter your name',
 		'name',
-		'',
+		'Sajib',
 		'Joe Billy',
 		[
 			DemoBmxValidator.required,
@@ -34,7 +34,10 @@ export class DemoBmxInput {
 		'Gender',
 		'Select your gender',
 		'gender',
-		'',
+		{
+			title: 'Male',
+			value: 'male'
+		},
 		'Male | Female | Other',
 		DemoBmxDropdown.genderDropdown
 	);
@@ -43,7 +46,7 @@ export class DemoBmxInput {
 		'Text Area',
 		'',
 		'text-area',
-		'',
+		'Lorem Ipsum',
 		'Enter some text',
 		[
 			DemoBmxValidator.nameMinLength

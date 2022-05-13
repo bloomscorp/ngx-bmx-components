@@ -18,7 +18,7 @@ export class AbstractBmxSelectInput implements BmxSelectInput {
 		public label: string,
 		public hint: string,
 		public name: string,
-		public value: string | number,
+		public value: BmxSelectInputItem,
 		public placeholder: string,
 		public readOnly: boolean = false,
 		entries: BmxSelectInputItem[] = [],

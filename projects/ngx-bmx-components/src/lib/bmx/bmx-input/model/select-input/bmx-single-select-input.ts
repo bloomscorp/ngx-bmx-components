@@ -12,7 +12,7 @@ export class BmxSingleSelectInput extends AbstractBmxSelectInput {
 		label: string,
 		hint: string,
 		name: string,
-		value: string | number,
+		value: BmxSelectInputItem,
 		placeholder: string,
 		readOnly: boolean = false,
 		entries: BmxSelectInputItem[],
@@ -37,7 +37,10 @@ export class BmxSingleSelectInput extends AbstractBmxSelectInput {
 		label: string,
 		hint: string,
 		name: string,
-		value: string | number = '',
+		value: BmxSelectInputItem = {
+			title: '',
+			value: ''
+		},
 		placeholder: string,
 		entries: BmxSelectInputItem[],
 		validators: BmxValidator[] = []

@@ -36,6 +36,10 @@ export class BmxFormComponent implements OnInit {
 		return <FormControl>this.controls[name];
 	}
 
+	public formSubmit(): void {
+		this.data.submit.onSubmit(this.formGroup);
+	}
+
 	public trackLayoutContainer(index: number, container: BmxLayoutContainer): number {
 		return container.id;
 	}

@@ -1,6 +1,7 @@
-import {TupleBmxFormData} from "ngx-bmx-components";
+import {TupleBmxFormData} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-form/model/tuple-bmx-form-data";
 import {DemoBmxInput} from "./demo-bmx-input";
 import {BmxFormData} from '../../../../../../ngx-bmx-components/src/lib/bmx/bmx-form/interface/bmx-form-data';
+import {FormGroup} from "@angular/forms";
 
 export class DemoBmxFormData {
 
@@ -16,7 +17,7 @@ export class DemoBmxFormData {
 		{
 			title: 'submit',
 			classList: [],
-			onSubmit: () => {
+			onSubmit: (formGroup: FormGroup) => {
 
 			}
 		}

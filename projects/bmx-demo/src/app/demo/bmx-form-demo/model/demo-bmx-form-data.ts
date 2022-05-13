@@ -19,7 +19,8 @@ export class DemoBmxFormData {
 			classList: [],
 			onSubmit: (formGroup: FormGroup) => {
 				console.log(formGroup);
-			}
+			},
+			validateBeforeSubmit: true
 		}
 	);
 }

@@ -27,10 +27,8 @@ export class BmxSelectInputComponent implements OnInit {
 		setTimeout(() => this.formControl.setValue(this.data.value.value), 0);
 	}
 
-	// TODO: open this to API access
 	public valueChanges(event: EventEmitter<string | number>): void {
-		console.log('changes');
-		console.log(event);
+		this.data.onValueChange(event);
 	}
 
 	public trackItems(index: number, item: BmxSelectInputExtendedItem): number {

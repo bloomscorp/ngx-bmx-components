@@ -11,6 +11,7 @@ export class BmxSimpleTextAreaInput extends AbstractBmxTextAreaInput {
 		cols: number,
 		hint: string,
 		name: string,
+		value: string,
 		placeholder: string,
 		readOnly: boolean = false,
 		validators: BmxValidator[] = []
@@ -23,6 +24,7 @@ export class BmxSimpleTextAreaInput extends AbstractBmxTextAreaInput {
 			cols,
 			hint,
 			name,
+			value,
 			placeholder,
 			readOnly,
 			validators
@@ -33,6 +35,7 @@ export class BmxSimpleTextAreaInput extends AbstractBmxTextAreaInput {
 		label: string,
 		hint: string,
 		name: string,
+		value: string = '',
 		placeholder: string,
 		validators: BmxValidator[] = [],
 		rows: number = 1,
@@ -47,6 +50,7 @@ export class BmxSimpleTextAreaInput extends AbstractBmxTextAreaInput {
 			cols,
 			hint,
 			name,
+			value,
 			placeholder,
 			false,
 			validators

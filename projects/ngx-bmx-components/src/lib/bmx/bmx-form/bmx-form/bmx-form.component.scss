@@ -5,3 +5,29 @@
 .bmx-form-submit-button__default {
 	@apply bg-slate-400 text-center w-24 h-12 text-sm border-4 text-white py-1 px-2 rounded-lg;
 }
+
+.bmx-form {
+
+	.input-padding {
+		padding: 0.8rem;
+	}
+}
+
+.padding-2 {
+	padding: 0.5rem;
+}
+
+.margin-4 {
+	margin: 1rem;
+}
+
+.margin-y-3 {
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+	.margin-4 {
+		margin: 2rem;
+	}
+}

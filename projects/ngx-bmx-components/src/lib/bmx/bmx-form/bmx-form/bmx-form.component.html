@@ -1,6 +1,6 @@
-<section class="m-4 md:m-8">
-	<p class="p-2 capitalize font-bold text-3xl">{{ data.title }}</p>
-	<p class="p-2 font-bold text-sm text-gray-400">{{ data.subTitle }}</p>
+<section class="margin-4">
+	<p class="padding-2 capitalize font-bold text-3xl">{{ data.title }}</p>
+	<p class="padding-2 font-bold text-sm text-gray-400">{{ data.subTitle }}</p>
 	<form [formGroup]="formGroup"
 		  [fxLayout.xs]="data.layout.xs.layout"
 		  [fxLayout.sm]="data.layout.sm.layout"
@@ -12,10 +12,11 @@
 		  [fxLayoutAlign.md]="data.layout.md.align"
 		  [fxLayoutAlign.lg]="data.layout.lg.align"
 		  [fxLayoutAlign.xl]="data.layout.xl.align"
-		  class="bmx-form my-3">
+		  (ngSubmit)="formSubmit()"
+		  class="bmx-form margin-y-3">
 		<div *ngFor="let container of data.layoutContainers; trackBy: trackLayoutContainer"
 			 fxLayout="row"
-			 fxLayoutAlign="start center"
+			 fxLayoutAlign="start start"
 			 [ngClass]="container.classList">
 			<bmx-input *ngFor="let input of container.group.inputItems; trackBy: trackInputElement"
 						   [data]="input.inputItem"
@@ -23,10 +24,9 @@
 						   ngDefaultControl
 						   [fxFlex]="input.flex"
 						   [ngClass]="input.classList"
-						   class="px-2.5 py-2.5"></bmx-input>
+						   class="input-padding"></bmx-input>
 		</div>
 		<button type="submit"
-				(submit)="data.submit.onSubmit"
 				[ngClass]="data.submit.classList"
 				class="bmx-form-submit-button">
 			{{ data.submit.title }}

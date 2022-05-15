@@ -11,6 +11,7 @@ export class BmxNumberInput extends AbstractBmxContentInput {
 		label: string,
 		hint: string,
 		name: string,
+		value: number,
 		placeholder: string,
 		readOnly: boolean = false,
 		validators: BmxValidator[] = []
@@ -22,6 +23,7 @@ export class BmxNumberInput extends AbstractBmxContentInput {
 			label,
 			hint,
 			name,
+			String(value),
 			placeholder,
 			readOnly,
 			validators
@@ -32,6 +34,7 @@ export class BmxNumberInput extends AbstractBmxContentInput {
 		label: string,
 		hint: string,
 		name: string,
+		value: number,
 		placeholder: string,
 		validators: BmxValidator[] = []
 	): BmxContentInput {
@@ -41,6 +44,7 @@ export class BmxNumberInput extends AbstractBmxContentInput {
 			label,
 			hint,
 			name,
+			value,
 			placeholder,
 			false,
 			validators

@@ -6,7 +6,8 @@
 			  [rows]="data.rows"
 			  [cols]="data.cols"
 			  [placeholder]="data.placeholder"
-			  [readonly]="data.readOnly">
+			  [readonly]="data.readOnly"
+			  class="bmx-text-area">
 	</textarea>
 	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
 	<mat-error *ngFor="let error of data.validators">

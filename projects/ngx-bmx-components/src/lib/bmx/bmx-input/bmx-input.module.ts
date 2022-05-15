@@ -9,6 +9,7 @@ import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import { BmxImageInputComponent } from './bmx-image-input/bmx-image-input.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -22,13 +23,14 @@ import { BmxImageInputComponent } from './bmx-image-input/bmx-image-input.compon
 	exports: [
 		BmxInputComponent
 	],
-	imports: [
-		CommonModule,
-		MatFormFieldModule,
-		MatInputModule,
-		ReactiveFormsModule,
-		MatSelectModule
-	]
+    imports: [
+        CommonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatSelectModule,
+        FlexLayoutModule
+    ]
 })
 export class BmxInputModule {
 

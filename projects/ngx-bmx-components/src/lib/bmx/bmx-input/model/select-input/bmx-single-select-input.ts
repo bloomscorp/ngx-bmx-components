@@ -3,6 +3,7 @@ import {MatFormFieldAppearance} from "@angular/material/form-field";
 import {BmxValidator} from "../../interface/bmx-validator";
 import {BmxSelectInput} from "../../interface/bmx-select-input";
 import {BmxSelectInputItem} from "../../interface/bmx-select-input-item";
+import {EventEmitter} from "@angular/core";
 
 export class BmxSingleSelectInput extends AbstractBmxSelectInput {
 
@@ -12,6 +13,8 @@ export class BmxSingleSelectInput extends AbstractBmxSelectInput {
 		label: string,
 		hint: string,
 		name: string,
+		value: BmxSelectInputItem,
+		onValueChange: (event: EventEmitter<string | number>) => void,
 		placeholder: string,
 		readOnly: boolean = false,
 		entries: BmxSelectInputItem[],
@@ -24,6 +27,8 @@ export class BmxSingleSelectInput extends AbstractBmxSelectInput {
 			label,
 			hint,
 			name,
+			value,
+			onValueChange,
 			placeholder,
 			readOnly,
 			entries,
@@ -35,9 +40,14 @@ export class BmxSingleSelectInput extends AbstractBmxSelectInput {
 		label: string,
 		hint: string,
 		name: string,
+		value: BmxSelectInputItem = {
+			title: '',
+			value: ''
+		},
 		placeholder: string,
 		entries: BmxSelectInputItem[],
-		validators: BmxValidator[] = []
+		validators: BmxValidator[] = [],
+		onValueChange: (event: EventEmitter<string | number>) => void = AbstractBmxSelectInput.DEFAULT_ON_VALUE_CHANGE
 	): BmxSelectInput {
 		return new BmxSingleSelectInput(
 			'outline',
@@ -45,6 +55,8 @@ export class BmxSingleSelectInput extends AbstractBmxSelectInput {
 			label,
 			hint,
 			name,
+			value,
+			onValueChange,
 			placeholder,
 			false,
 			entries,

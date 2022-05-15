@@ -5,4 +5,5 @@ import {BmxContentInputType} from "./bmx-input-element-types";
 export interface BmxContentInput extends BmxInput {
 	appearance: MatFormFieldAppearance;
 	type: BmxContentInputType;
+	value: string;
 }

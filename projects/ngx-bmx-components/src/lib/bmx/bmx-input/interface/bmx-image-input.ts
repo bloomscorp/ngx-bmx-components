@@ -1,10 +1,11 @@
-import {BmxInputType} from "./bmx-input-type";
+import {BmxInput} from "./bmx-input";
+import {BmxImageInputElement, BmxInputElement} from "./bmx-input-element-types";
 
-export interface BmxImageInput {
-	name: string;
+export interface BmxImageInput extends BmxInput {
 	src: string;
 	alt: string;
 	width: number;
 	height: number;
-	inputType: BmxInputType;
+	classList: string[];
+	bmxInput: BmxImageInputElement;
 }

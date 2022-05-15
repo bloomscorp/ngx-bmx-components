@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit} from '@angular/core';
 import {BmxInputElement} from "../interface/bmx-input-element-types";
 import {FormControl} from "@angular/forms";
 import {BmxSelectInput} from "../interface/bmx-select-input";
@@ -24,7 +24,13 @@ export class BmxSelectInputComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.data = <BmxSelectInput>this.bmxData;
+		setTimeout(() => this.formControl.setValue(this.data.value.value), 0);
 	}
+
+	public valueChanges(event: EventEmitter<string | number>): void {
+		this.data.onValueChange(event);
+	}
+
 	public trackItems(index: number, item: BmxSelectInputExtendedItem): number {
 		return item.id;
 	}

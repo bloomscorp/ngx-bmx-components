@@ -13,6 +13,7 @@ export class BmxEmailInput extends AbstractBmxContentInput {
 		label: string,
 		hint: string,
 		name: string,
+		value: string,
 		placeholder: string,
 		readOnly: boolean = false,
 		validators: BmxValidator[] = []
@@ -24,6 +25,7 @@ export class BmxEmailInput extends AbstractBmxContentInput {
 			label,
 			hint,
 			name,
+			value,
 			placeholder,
 			readOnly,
 			validators
@@ -34,6 +36,7 @@ export class BmxEmailInput extends AbstractBmxContentInput {
 		label: string,
 		hint: string,
 		name: string,
+		value: string = '',
 		placeholder: string
 	): BmxContentInput {
 		return new BmxEmailInput(
@@ -42,6 +45,7 @@ export class BmxEmailInput extends AbstractBmxContentInput {
 			label,
 			hint,
 			name,
+			value,
 			placeholder,
 			false,
 			BmxDefaultValidators.emailValidator

@@ -1,6 +1,26 @@
-<input [type]="'image'"
-	   [name]="data.name"
-	   [src]="data.src"
-	   [width]="data.width"
-	   [height]="data.height"
-	   [alt]="data.name">
+<div fxLayout.xs="column"
+	 fxLayout.sm="column"
+	 fxLayout.md="row"
+	 fxLayout.lg="row"
+	 fxLayout.xl="row"
+	 fxLayoutAlign.xs="start stretch"
+	 fxLayoutAlign.sm="start stretch"
+	 fxLayoutAlign.md="space-between center"
+	 fxLayoutAlign.lg="space-between center"
+	 fxLayoutAlign.xl="space-between center">
+	<div fxLayout="column"
+		 fxLayoutAlign="start center">
+		<img [src]="data.src" [alt]="data.name" [width]="data.width" [height]="data.height"/>
+		<p class="padding-1">{{data.bmxInput.label}}</p>
+	</div>
+	<bmx-input [data]="data.bmxInput"
+			   [formControl]="formControl"
+			   ngDefaultControl
+			   fxFlex.xs="100"
+			   fxFlex.sm="100"
+			   fxFlex.md="75"
+			   fxFlex.lg="75"
+			   fxFlex.xl="75"
+			   [ngClass]="data.classList"
+			   class="input-padding"></bmx-input>
+</div>

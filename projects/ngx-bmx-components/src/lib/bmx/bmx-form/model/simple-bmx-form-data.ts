@@ -3,13 +3,15 @@ import {BmxRowLayout} from "../../bmx-layout/interface/bmx-row-layout";
 import {BmxLayoutContainer} from "../../bmx-layout/interface/bmx-layout-container";
 import {arrayEmpty} from "bmx-pastebox";
 import {BmxSubmitButton} from "../interface/bmx-submit-button";
+import {FormGroup} from "@angular/forms";
 
 export class SimpleBmxFormData extends AbstractBmxFormData {
 
 	public static readonly DEFAULT_FORM_SUBMIT: BmxSubmitButton = {
 		title: 'submit',
 		classList: ['bmx-form-submit-button__default'],
-		onSubmit: () => console.error('BmxSubmitButton#onSubmit is not implemented!')
+		onSubmit: (formGroup: FormGroup) => console.error('BmxSubmitButton#onSubmit is not implemented!'),
+		validateBeforeSubmit: true
 	};
 
 	public constructor(

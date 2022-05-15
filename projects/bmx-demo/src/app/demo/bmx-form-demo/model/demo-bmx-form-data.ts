@@ -12,7 +12,8 @@ export class DemoBmxFormData {
 			DemoBmxInput.nameInput,
 			DemoBmxInput.contactInput,
 			DemoBmxInput.genderSelect,
-			DemoBmxInput.textAreaInput
+			DemoBmxInput.textAreaInput,
+			DemoBmxInput.imageInput
 		],
 		{
 			title: 'submit',

@@ -1,5 +1,7 @@
 import {AbstractBmxImageInput} from "./abstract-bmx-image-input";
 import {BmxImageInput} from "../../interface/bmx-image-input";
+import {BmxImageInputElement} from "../../interface/bmx-input-element-types";
+import {BmxValidator} from "../../interface/bmx-validator";
 
 export class BmxSimpleImageInput extends AbstractBmxImageInput {
 
@@ -8,14 +10,30 @@ export class BmxSimpleImageInput extends AbstractBmxImageInput {
 		src: string,
 		alt: string,
 		width: number,
-		height: number
+		height: number,
+		classList: string[],
+		bmxInput: BmxImageInputElement,
+		disabled: boolean,
+		hint: string,
+		label: string,
+		placeholder: string,
+		readOnly: boolean,
+		validators: BmxValidator[]
 	) {
 		super(
 			name,
 			src,
 			alt,
 			width,
-			height
+			height,
+			classList,
+			bmxInput,
+			disabled,
+			hint,
+			label,
+			placeholder,
+			readOnly,
+			validators
 		)
 	}
 
@@ -23,8 +41,16 @@ export class BmxSimpleImageInput extends AbstractBmxImageInput {
 		name: string,
 		src: string,
 		alt: string,
-		width: number = 200,
-		height: number = 200
+		bmxInput: BmxImageInputElement,
+		width: number = 300,
+		height: number = 200,
+		classList: string[] = [],
+		disabled: boolean = false,
+		hint: string = '',
+		label: string = '',
+		placeholder: string = '',
+		readOnly: boolean = false,
+		validators: BmxValidator[] = []
 	): BmxImageInput {
 
 		return new BmxSimpleImageInput (
@@ -32,7 +58,15 @@ export class BmxSimpleImageInput extends AbstractBmxImageInput {
 			src,
 			alt,
 			width,
-			height
+			height,
+			classList,
+			bmxInput,
+			disabled,
+			hint,
+			label,
+			placeholder,
+			readOnly,
+			validators
 		);
 	}
 

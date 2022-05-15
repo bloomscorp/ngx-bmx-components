@@ -8,3 +8,5 @@ export declare type BmxContentInputType = 'text' | 'tel' | 'email' | 'number';
 export declare type BmxSelectInputType = 'single' | 'multiple';
 
 export declare type BmxInputElement = BmxContentInput | BmxSelectInput | BmxTextAreaInput | BmxImageInput;
+
+export declare type BmxImageInputElement = BmxContentInput | BmxSelectInput | BmxTextAreaInput ;

@@ -43,7 +43,7 @@ export class BmxFormComponent implements OnInit {
 				this.formGroup.markAsDirty();
 				return;
 			} else {
-				// TODO: add dialog / alert api
+				//TODO: add dialog / alert api
 				console.log('form is invalid!');
 			}
 		} else this.data.submit.onSubmit(this.formGroup);

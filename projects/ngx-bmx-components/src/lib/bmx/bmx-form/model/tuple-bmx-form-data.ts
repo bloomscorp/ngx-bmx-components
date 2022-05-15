@@ -5,6 +5,7 @@ import {BmxRowItem} from "../../bmx-layout/interface/bmx-row-item";
 import {BmxInputElement} from "../../bmx-input/interface/bmx-input-element-types";
 import {arrayEmpty} from 'bmx-pastebox';
 import {BmxSubmitButton} from "../interface/bmx-submit-button";
+import {BmxInputType} from "../../bmx-input/interface/bmx-input-type";
 
 export class TupleBmxFormData extends SimpleBmxFormData {
 
@@ -29,6 +30,14 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 	}
 
 	private static prepareRowItem(id: number, input: BmxInputElement): BmxRowItem {
+		if (input.inputType === BmxInputType.IMAGE) {
+			return {
+				id: id,
+				inputItem: input,
+				flex: 100,
+				classList: []
+			};
+		}
 		return {
 			id: id,
 			inputItem: input,

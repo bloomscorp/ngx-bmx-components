@@ -13,7 +13,7 @@
 		<img [src]="data.src" [alt]="data.name" [width]="data.width" [height]="data.height"/>
 		<p class="padding-1">{{data.bmxInput.label}}</p>
 	</div>
-	<bmx-input [data]="data.bmxInput"
+	<bmx-nested-input [data]="data.bmxInput"
 			   [formControl]="formControl"
 			   ngDefaultControl
 			   fxFlex.xs="100"
@@ -22,5 +22,5 @@
 			   fxFlex.lg="75"
 			   fxFlex.xl="75"
 			   [ngClass]="data.classList"
-			   class="input-padding"></bmx-input>
+			   class="input-padding"></bmx-nested-input>
 </div>

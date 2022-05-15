@@ -16,7 +16,7 @@
 		  class="bmx-form my-3">
 		<div *ngFor="let container of data.layoutContainers; trackBy: trackLayoutContainer"
 			 fxLayout="row"
-			 fxLayoutAlign="start center"
+			 fxLayoutAlign="start start"
 			 [ngClass]="container.classList">
 			<bmx-input *ngFor="let input of container.group.inputItems; trackBy: trackInputElement"
 						   [data]="input.inputItem"

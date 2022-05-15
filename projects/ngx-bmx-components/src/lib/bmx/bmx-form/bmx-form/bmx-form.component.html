@@ -1,6 +1,6 @@
-<section class="m-4 md:m-8">
-	<p class="p-2 capitalize font-bold text-3xl">{{ data.title }}</p>
-	<p class="p-2 font-bold text-sm text-gray-400">{{ data.subTitle }}</p>
+<section class="margin-4">
+	<p class="padding-2 capitalize font-bold text-3xl">{{ data.title }}</p>
+	<p class="padding-2 font-bold text-sm text-gray-400">{{ data.subTitle }}</p>
 	<form [formGroup]="formGroup"
 		  [fxLayout.xs]="data.layout.xs.layout"
 		  [fxLayout.sm]="data.layout.sm.layout"
@@ -13,7 +13,7 @@
 		  [fxLayoutAlign.lg]="data.layout.lg.align"
 		  [fxLayoutAlign.xl]="data.layout.xl.align"
 		  (ngSubmit)="formSubmit()"
-		  class="bmx-form my-3">
+		  class="bmx-form margin-y-3">
 		<div *ngFor="let container of data.layoutContainers; trackBy: trackLayoutContainer"
 			 fxLayout="row"
 			 fxLayoutAlign="start start"
@@ -24,7 +24,7 @@
 						   ngDefaultControl
 						   [fxFlex]="input.flex"
 						   [ngClass]="input.classList"
-						   class="px-2.5 py-2.5"></bmx-input>
+						   class="input-padding"></bmx-input>
 		</div>
 		<button type="submit"
 				[ngClass]="data.submit.classList"

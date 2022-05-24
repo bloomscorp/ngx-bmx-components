@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './demo/demo.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {BmxTagModule} from "../../../../ngx-bmx-components/src/lib/bmx/bmx-ui/neumorphism/bmx-tag/bmx-tag.module";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 	imports: [
 		CommonModule,
 		DemoRoutingModule,
-		FlexLayoutModule
+		FlexLayoutModule,
+		BmxTagModule
 	]
 })
 export class DemoModule { }

@@ -4,6 +4,7 @@ import {BmxFormComponent} from './bmx-form/bmx-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {BmxInputModule} from "../bmx-input/bmx-input.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {BmxFormButtonModule} from "../bmx-button/bmx-form-button/bmx-form-button.module";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 		CommonModule,
 		ReactiveFormsModule,
 		BmxInputModule,
-		FlexLayoutModule
+		FlexLayoutModule,
+		BmxFormButtonModule
 	]
 })
 export class BmxFormModule {

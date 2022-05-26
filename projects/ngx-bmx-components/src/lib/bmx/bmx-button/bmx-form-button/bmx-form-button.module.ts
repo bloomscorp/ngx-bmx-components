@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BmxButtonComponent } from './bmx-button/bmx-button.component';
+import { BmxFormButtonComponent } from './bmx-form-button/bmx-form-button.component';
 
 
 
 @NgModule({
 	declarations: [
-		BmxButtonComponent
+		BmxFormButtonComponent
 	],
 	exports: [
-		BmxButtonComponent
+		BmxFormButtonComponent
 	],
 	imports: [
 		CommonModule
 	]
 })
-export class BmxButtonModule { }
+export class BmxFormButtonModule { }

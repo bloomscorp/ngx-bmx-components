@@ -20,7 +20,7 @@ export class BmxFormComponent implements OnInit {
 
 	public testButton: BmxFormButton = {
 		title: 'Draft',
-		onClick: () => console.log('button clicked!'),
+		onSubmit: (formGroup: FormGroup) => console.log('button clicked!'),
 		inputType: BmxFormButtonType.EXTRA
 	};
 

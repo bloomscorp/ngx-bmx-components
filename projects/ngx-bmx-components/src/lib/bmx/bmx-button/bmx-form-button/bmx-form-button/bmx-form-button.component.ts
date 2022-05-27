@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BmxFormButton} from "../interface/bmx-form-button";
+import {FormGroup} from "@angular/forms";
 
 @Component({
 	selector: 'bmx-form-button',
@@ -11,11 +12,13 @@ export class BmxFormButtonComponent implements OnInit {
 	@Input()
 	public data: BmxFormButton = {} as BmxFormButton;
 
+	@Input()
+	public formGroup: FormGroup = {} as FormGroup;
+
 	constructor() {
 	}
 
 	ngOnInit(): void {
-		console.log(this.data);
 	}
 
 }

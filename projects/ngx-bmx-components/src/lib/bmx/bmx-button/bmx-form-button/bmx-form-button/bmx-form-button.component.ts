@@ -15,6 +15,7 @@ export class BmxFormButtonComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
+		console.log(this.data);
 	}
 
 }

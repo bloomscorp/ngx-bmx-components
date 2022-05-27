@@ -26,8 +26,4 @@ export class BmxInputComponent implements OnInit {
 			)
 		);
 	}
-
-	public castToContentInput(): BmxInputElement {
-		return <BmxContentInput>this.data;
-	}
 }

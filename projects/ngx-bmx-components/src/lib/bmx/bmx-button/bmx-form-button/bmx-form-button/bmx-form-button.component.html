@@ -1,20 +1,18 @@
 <ng-container [ngSwitch]="data.inputType">
 	<ng-container *ngSwitchCase="0">
-		<bmx-confirm-form-button></bmx-confirm-form-button>
+		<bmx-confirm-form-button [data]="data"></bmx-confirm-form-button>
 	</ng-container>
 	<ng-container *ngSwitchCase="1">
-		<bmx-danger-form-button></bmx-danger-form-button>
+		<bmx-danger-form-button [data]="data"></bmx-danger-form-button>
 	</ng-container>
 	<ng-container *ngSwitchCase="2">
-		<bmx-info-form-button></bmx-info-form-button>
+		<bmx-info-form-button [data]="data"></bmx-info-form-button>
 	</ng-container>
 	<ng-container *ngSwitchCase="3">
-		<bmx-warn-form-button></bmx-warn-form-button>
+		<bmx-warn-form-button [data]="data"></bmx-warn-form-button>
 	</ng-container>
 	<ng-container *ngSwitchCase="4">
-		<bmx-extra-form-button></bmx-extra-form-button>
+		<bmx-extra-form-button [data]="data"></bmx-extra-form-button>
 	</ng-container>
+	<ng-container *ngSwitchDefault></ng-container>
 </ng-container>
-
-
-<button (click)="data.onClick()">{{ data.title }}</button>

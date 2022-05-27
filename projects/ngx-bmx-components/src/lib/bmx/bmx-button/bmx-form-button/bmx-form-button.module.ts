@@ -5,6 +5,7 @@ import { BmxConfirmFormButtonComponent } from './bmx-confirm-form-button/bmx-con
 import { BmxWarnFormButtonComponent } from './bmx-warn-form-button/bmx-warn-form-button.component';
 import { BmxInfoFormButtonComponent } from './bmx-info-form-button/bmx-info-form-button.component';
 import { BmxDangerFormButtonComponent } from './bmx-danger-form-button/bmx-danger-form-button.component';
+import { BmxExtraFormButtonComponent } from './bmx-extra-form-button/bmx-extra-form-button.component';
 
 
 
@@ -14,7 +15,8 @@ import { BmxDangerFormButtonComponent } from './bmx-danger-form-button/bmx-dange
   BmxConfirmFormButtonComponent,
   BmxWarnFormButtonComponent,
   BmxInfoFormButtonComponent,
-  BmxDangerFormButtonComponent
+  BmxDangerFormButtonComponent,
+  BmxExtraFormButtonComponent
 	],
 	exports: [
 		BmxFormButtonComponent

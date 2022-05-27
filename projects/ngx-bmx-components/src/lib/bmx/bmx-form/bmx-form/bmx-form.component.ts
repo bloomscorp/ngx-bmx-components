@@ -4,6 +4,7 @@ import {AbstractControl, FormControl, FormGroup} from "@angular/forms";
 import {BmxLayoutContainer} from "../../bmx-layout/interface/bmx-layout-container";
 import {BmxRowItem} from "../../bmx-layout/interface/bmx-row-item";
 import {BmxFormButton} from "../../bmx-button/bmx-form-button/interface/bmx-form-button";
+import {BmxFormButtonType} from "../../bmx-button/bmx-form-button/interface/bmx-form-button-type";
 
 @Component({
 	selector: 'bmx-form',
@@ -19,7 +20,8 @@ export class BmxFormComponent implements OnInit {
 
 	public testButton: BmxFormButton = {
 		title: 'Draft',
-		onClick: () => console.log('button clicked!')
+		onClick: () => console.log('button clicked!'),
+		inputType: BmxFormButtonType.EXTRA
 	};
 
 	public controls: {

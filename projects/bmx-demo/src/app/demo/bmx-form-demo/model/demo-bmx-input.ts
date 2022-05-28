@@ -7,13 +7,9 @@ import {BmxTextInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx
 import {BmxContactInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/content-input/bmx-contact-input";
 import {BmxSingleSelectInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/select-input/bmx-single-select-input";
 import {BmxSimpleTextAreaInput} from '../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/text-area-input/bmx-simple-text-area-input';
-import {
-	BmxSimpleImageInput
-} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/image-input/bmx-simple-image-input";
+import {BmxSimpleImageInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/image-input/bmx-simple-image-input";
 import {BmxImageInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/interface/bmx-image-input";
-import {
-	BmxRequiredValidator
-} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/validators/bmx-required-validator";
+import {BmxRequiredValidator} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/validators/bmx-required-validator";
 
 export class DemoBmxInput {
 

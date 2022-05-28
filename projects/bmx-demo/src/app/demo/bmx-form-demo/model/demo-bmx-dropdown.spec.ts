@@ -1,4 +1,4 @@
-import { DemoBmxDropdown } from './demo-bmx-dropdown';
+import {DemoBmxDropdown} from './demo-bmx-dropdown';
 
 describe('DemoBmxDropdown', () => {
   it('should create an instance', () => {

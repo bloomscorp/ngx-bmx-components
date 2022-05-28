@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BmxFormButtonComponent } from './bmx-form-button.component';
+import {BmxFormButtonComponent} from './bmx-form-button.component';
 
 describe('BmxFormButtonComponent', () => {
   let component: BmxFormButtonComponent;

@@ -1,5 +1,5 @@
 import {BmxInput} from "./bmx-input";
-import {BmxImageInputElement, BmxInputElement} from "./bmx-input-element-types";
+import {BmxImageInputElement} from "./bmx-input-element-types";
 
 export interface BmxImageInput extends BmxInput {
 	src: string;

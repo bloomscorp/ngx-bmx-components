@@ -1,7 +1,7 @@
 import {BmxImageInput} from "../../interface/bmx-image-input";
 import {BmxInputType} from "../../interface/bmx-input-type";
 import {BmxValidator} from "../../interface/bmx-validator";
-import {BmxImageInputElement, BmxInputElement} from "../../interface/bmx-input-element-types";
+import {BmxImageInputElement} from "../../interface/bmx-input-element-types";
 
 export class AbstractBmxImageInput implements BmxImageInput {
 

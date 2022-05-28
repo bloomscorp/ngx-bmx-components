@@ -1,4 +1,4 @@
-import { TrioBmxFormData } from './trio-bmx-form-data';
+import {TrioBmxFormData} from './trio-bmx-form-data';
 
 describe('TrioBmxFormData', () => {
   it('should create an instance', () => {

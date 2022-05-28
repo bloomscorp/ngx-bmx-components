@@ -4,19 +4,25 @@ import {BmxInput} from "../../bmx-input/interface/bmx-input";
 import {arrayEmpty} from "bmx-pastebox";
 import {BmxInputRowItem} from "../../bmx-layout/interface/input-layout/bmx-input-row-item";
 import {BmxInputRowLayout} from "../../bmx-layout/interface/input-layout/bmx-input-row-layout";
+import {SimpleBmxButtonLayoutContainer} from "../../bmx-button/bmx-form-button/model/simple-bmx-button-layout-container";
+import {BmxSubmitButton} from "../interface/bmx-submit-button";
 
 export class TrioBmxFormData extends SimpleBmxFormData {
 
 	public constructor(
 		title: string,
 		subTitle: string,
-		inputs: BmxInputElement[]
+		inputs: BmxInputElement[],
+		buttonLayout: SimpleBmxButtonLayoutContainer,
+		submit: BmxSubmitButton = SimpleBmxFormData.DEFAULT_FORM_SUBMIT
 	) {
 		TrioBmxFormData.validateInputs(inputs);
 		super(
 			title,
 			subTitle,
-			TrioBmxFormData.prepareTrioRowLayouts(inputs)
+			TrioBmxFormData.prepareTrioRowLayouts(inputs),
+			buttonLayout,
+			submit
 		);
 	}
 

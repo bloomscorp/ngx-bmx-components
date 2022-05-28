@@ -6,6 +6,7 @@ import {BmxInputElement} from "../../bmx-input/interface/bmx-input-element-types
 import {arrayEmpty} from 'bmx-pastebox';
 import {BmxSubmitButton} from "../interface/bmx-submit-button";
 import {BmxInputType} from "../../bmx-input/interface/bmx-input-type";
+import {SimpleBmxButtonLayoutContainer} from "../../bmx-button/bmx-form-button/model/simple-bmx-button-layout-container";
 
 export class TupleBmxFormData extends SimpleBmxFormData {
 
@@ -13,6 +14,7 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 		title: string,
 		subTitle: string,
 		inputs: BmxInputElement[],
+		buttonLayout: SimpleBmxButtonLayoutContainer,
 		submit: BmxSubmitButton = SimpleBmxFormData.DEFAULT_FORM_SUBMIT
 	) {
 		TupleBmxFormData.validateInputs(inputs);
@@ -20,6 +22,7 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 			title,
 			subTitle,
 			TupleBmxFormData.prepareTupleRowLayouts(inputs),
+			buttonLayout,
 			submit
 		);
 	}

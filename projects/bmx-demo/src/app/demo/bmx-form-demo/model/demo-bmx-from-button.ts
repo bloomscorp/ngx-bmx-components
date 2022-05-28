@@ -11,7 +11,7 @@ export class DemoBmxFromButton {
 
 	public static readonly DEFAULT_BUTTON: BmxFormButton = {
 		title: 'draft',
-		onSubmit: (formGroup: FormGroup) => console.log('BmxFormButton#onSubmit is not implemented!'),
+		onSubmit: (formGroup: FormGroup) => console.error('BmxFormButton#onSubmit is not implemented!'),
 		inputType: BmxFormButtonType.CONFIRM,
 		validateBeforeSubmit: true
 	};

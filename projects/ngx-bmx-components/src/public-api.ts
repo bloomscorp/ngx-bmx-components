@@ -13,4 +13,5 @@ export * from './lib/bmx/bmx-form/bmx-form/bmx-form.component';
 
 export * from './lib/bmx/bmx-form/model/bmx-form-models';
 export * from './lib/bmx/bmx-input/model/bmx-input-models';
-export * from './lib/bmx/bmx-button/model/bmx-button-models';
+
+export * from './lib/bmx/bmx-button/exports';

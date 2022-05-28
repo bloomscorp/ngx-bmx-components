@@ -16,10 +16,13 @@ export class BmxFormButtonComponent implements OnInit {
 	@Input()
 	public formGroup: FormGroup = {} as FormGroup;
 
+	public buttonData: BmxFormButton = {} as BmxFormButton;
+
 	constructor() {
 	}
 
 	ngOnInit(): void {
+		this.buttonData = <BmxFormButton>this.data;
 	}
 
 }

@@ -11,17 +11,14 @@ import {BmxButtonElement} from "../../interface/bmx-button-element-types";
 export class BmxInfoFormButtonComponent implements OnInit {
 
 	@Input()
-	public data: BmxButtonElement = {} as BmxFormButton;
+	public data: BmxFormButton = {} as BmxFormButton;
 
 	@Input()
 	public formGroup: FormGroup = {} as FormGroup;
-
-	public buttonData: BmxFormButton = {} as BmxFormButton;
 
 	constructor() {
 	}
 
 	ngOnInit(): void {
-		this.buttonData = <BmxFormButton>this.data;
 	}
 }

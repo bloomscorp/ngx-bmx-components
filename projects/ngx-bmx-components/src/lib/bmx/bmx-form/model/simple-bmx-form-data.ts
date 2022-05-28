@@ -12,6 +12,7 @@ import {BmxFormButtonType} from "../../bmx-button/bmx-form-button/interface/bmx-
 
 export class SimpleBmxFormData extends AbstractBmxFormData {
 
+	// TODO: remove
 	public static readonly DEFAULT_FORM_SUBMIT: BmxSubmitButton = {
 		title: 'submit',
 		classList: ['bmx-form-submit-button__default'],

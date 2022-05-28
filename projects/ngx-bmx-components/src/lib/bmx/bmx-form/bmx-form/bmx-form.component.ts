@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BmxFormData} from "../interface/bmx-form-data";
 import {AbstractControl, FormControl, FormGroup} from "@angular/forms";
-import {BmxLayoutContainer} from "../../bmx-layout/interface/bmx-layout-container";
-import {BmxRowItem} from "../../bmx-layout/interface/bmx-row-item";
+import {BmxInputLayoutContainer} from "../../bmx-layout/interface/input-layout/bmx-input-layout-container";
+import {BmxInputRowItem} from "../../bmx-layout/interface/input-layout/bmx-input-row-item";
 import {BmxFormButton} from "../../bmx-button/bmx-form-button/interface/bmx-form-button";
 import {BmxFormButtonType} from "../../bmx-button/bmx-form-button/interface/bmx-form-button-type";
 
@@ -57,11 +57,11 @@ export class BmxFormComponent implements OnInit {
 		} else this.data.submit.onSubmit(this.formGroup);
 	}
 
-	public trackLayoutContainer(index: number, container: BmxLayoutContainer): number {
+	public trackLayoutContainer(index: number, container: BmxInputLayoutContainer): number {
 		return container.id;
 	}
 
-	public trackInputElement(index: number, item: BmxRowItem): number {
+	public trackInputElement(index: number, item: BmxInputRowItem): number {
 		return item.id;
 	}
 }

@@ -5,6 +5,8 @@ import {FormGroup} from "@angular/forms";
 
 export class DemoBmxFormData {
 
+	// public static contactFormButton: BmxButtonLayoutContainer = {};
+
 	public static contactForm: BmxFormData = new TupleBmxFormData(
 		'Contact Form',
 		'This is a demo contact form',
@@ -15,6 +17,7 @@ export class DemoBmxFormData {
 			DemoBmxInput.textAreaInput,
 			DemoBmxInput.imageInput
 		],
+		// DemoBmxFormData.contactFormButton,
 		{
 			title: 'submit',
 			classList: [],

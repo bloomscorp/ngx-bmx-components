@@ -4,6 +4,7 @@ import {BmxInputLayoutContainer} from "../../bmx-layout/interface/input-layout/b
 import {arrayEmpty} from "bmx-pastebox";
 import {BmxSubmitButton} from "../interface/bmx-submit-button";
 import {FormGroup} from "@angular/forms";
+import {BmxButtonLayoutContainer} from "../../bmx-layout/interface/button-layout/bmx-button-layout-container";
 
 export class SimpleBmxFormData extends AbstractBmxFormData {
 
@@ -18,6 +19,7 @@ export class SimpleBmxFormData extends AbstractBmxFormData {
 		title: string,
 		subTitle: string,
 		rowLayouts: BmxInputRowLayout[],
+		buttonLayout: BmxButtonLayoutContainer,
 		submit: BmxSubmitButton = SimpleBmxFormData.DEFAULT_FORM_SUBMIT
 	) {
 		SimpleBmxFormData.validateRows(rowLayouts);
@@ -25,6 +27,7 @@ export class SimpleBmxFormData extends AbstractBmxFormData {
 			title,
 			subTitle,
 			SimpleBmxFormData.prepareGroups(rowLayouts),
+			buttonLayout,
 			submit
 		);
 	}

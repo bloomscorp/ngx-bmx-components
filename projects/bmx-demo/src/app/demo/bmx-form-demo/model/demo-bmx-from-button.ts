@@ -24,7 +24,10 @@ export class DemoBmxFromButton {
 	};
 
 	public static readonly DEFAULT_BUTTON_ROW_LAYOUT: BmxButtonRowLayout = {
-		buttonItems: [DemoBmxFromButton.DEFAULT_BUTTON_ROW_ITEM]
+		buttonItems: [
+			DemoBmxFromButton.DEFAULT_BUTTON_ROW_ITEM,
+			DemoBmxFromButton.DEFAULT_BUTTON_ROW_ITEM
+		]
 	};
 
 	public static contactFormButton: SimpleBmxButtonLayoutContainer = new SimpleBmxButtonLayoutContainer(

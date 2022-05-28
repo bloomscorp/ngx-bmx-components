@@ -34,14 +34,9 @@
 
 
 	</form>
-
 	<div fxLayout="row" fxLayoutAlign="end center">
 		<bmx-form-button *ngFor="let button of data.buttonLayout.group.buttonItems"
 						 [data]="button.buttonItem"
 						 [formGroup]="formGroup"></bmx-form-button>
 	</div>
-
-
-<bmx-form-button [data]="testButton" [formGroup]="formGroup"></bmx-form-button>
-
 </section>

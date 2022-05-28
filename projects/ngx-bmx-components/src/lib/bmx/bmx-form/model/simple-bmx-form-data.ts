@@ -4,7 +4,6 @@ import {BmxInputLayoutContainer} from "../../bmx-layout/interface/input-layout/b
 import {arrayEmpty} from "bmx-pastebox";
 import {BmxSubmitButton} from "../interface/bmx-submit-button";
 import {FormGroup} from "@angular/forms";
-import {BmxButtonLayoutContainer} from "../../bmx-layout/interface/button-layout/bmx-button-layout-container";
 import {SimpleBmxButtonLayoutContainer} from "../../bmx-button/bmx-form-button/model/simple-bmx-button-layout-container";
 
 export class SimpleBmxFormData extends AbstractBmxFormData {

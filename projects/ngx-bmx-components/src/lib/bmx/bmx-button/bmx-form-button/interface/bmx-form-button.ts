@@ -6,4 +6,5 @@ export interface BmxFormButton extends BmxElement {
 	title: string;
 	onSubmit: (formGroup: FormGroup) => void;
 	inputType: BmxFormButtonType;
+	validateBeforeSubmit: boolean;
 }

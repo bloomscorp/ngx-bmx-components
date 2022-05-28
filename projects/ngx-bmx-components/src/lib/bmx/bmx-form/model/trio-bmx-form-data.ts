@@ -13,7 +13,7 @@ export class TrioBmxFormData extends SimpleBmxFormData {
 		title: string,
 		subTitle: string,
 		inputs: BmxInputElement[],
-		buttonLayout: SimpleBmxButtonLayoutContainer,
+		buttonLayout: SimpleBmxButtonLayoutContainer = SimpleBmxFormData.DEFAULT_BUTTON_LAYOUT_CONTAINER,
 		submit: BmxSubmitButton = SimpleBmxFormData.DEFAULT_FORM_SUBMIT
 	) {
 		TrioBmxFormData.validateInputs(inputs);

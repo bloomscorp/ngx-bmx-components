@@ -15,4 +15,5 @@ export interface BmxSubmitButton {
 	title: string;
 	classList: string[];
 	onSubmit: (formGroup: FormGroup) => void;
+	validateBeforeSubmit: boolean;
 }

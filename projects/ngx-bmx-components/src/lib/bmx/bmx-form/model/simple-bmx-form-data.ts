@@ -10,7 +10,8 @@ export class SimpleBmxFormData extends AbstractBmxFormData {
 	public static readonly DEFAULT_FORM_SUBMIT: BmxSubmitButton = {
 		title: 'submit',
 		classList: ['bmx-form-submit-button__default'],
-		onSubmit: (formGroup: FormGroup) => console.error('BmxSubmitButton#onSubmit is not implemented!')
+		onSubmit: (formGroup: FormGroup) => console.error('BmxSubmitButton#onSubmit is not implemented!'),
+		validateBeforeSubmit: true
 	};
 
 	public constructor(

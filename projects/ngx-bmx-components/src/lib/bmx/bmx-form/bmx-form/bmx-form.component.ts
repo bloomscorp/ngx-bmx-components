@@ -37,7 +37,16 @@ export class BmxFormComponent implements OnInit {
 	}
 
 	public formSubmit(): void {
-		this.data.submit.onSubmit(this.formGroup);
+		if (this.data.submit.validateBeforeSubmit) {
+			if (this.formGroup.valid) {
+				this.data.submit.onSubmit(this.formGroup);
+				this.formGroup.markAsDirty();
+				return;
+			} else {
+				//TODO: add dialog / alert api
+				console.log('form is invalid!');
+			}
+		} else this.data.submit.onSubmit(this.formGroup);
 	}
 
 	public trackLayoutContainer(index: number, container: BmxLayoutContainer): number {

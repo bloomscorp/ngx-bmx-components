@@ -5,9 +5,9 @@
 			  [formControl]="formControl"
 			  [rows]="data.rows"
 			  [cols]="data.cols"
-			  [value]="data.value"
 			  [placeholder]="data.placeholder"
-			  [readonly]="data.readOnly">
+			  [readonly]="data.readOnly"
+			  class="bmx-text-area">
 	</textarea>
 	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
 	<mat-error *ngFor="let error of data.validators">

@@ -1,6 +1,7 @@
 <mat-form-field class="bmx-input w-full text-sm" [appearance]="data.appearance">
 	<mat-label>{{ data.label }}</mat-label>
-	<mat-select [formControl]="formControl" [(value)]="data.value">
+	<mat-select [formControl]="formControl"
+				(valueChange)="valueChanges($event)">
 		<mat-option *ngFor="let item of data.entries; trackBy: trackItems"
 					[value]="item.value"
 					[disabled]="item.disabled">{{ item.title }}</mat-option>

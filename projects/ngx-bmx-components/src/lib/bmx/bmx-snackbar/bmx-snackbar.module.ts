@@ -11,6 +11,7 @@ import {BmxWarningSnackbarComponent} from './bmx-warning-snackbar/bmx-warning-sn
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {BmxPipeModule} from "../bmx-pipe/bmx-pipe.module";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 		FlexLayoutModule,
 		MatTooltipModule,
 		BmxPipeModule,
-		MatProgressSpinnerModule
+		MatProgressSpinnerModule,
+		MatSnackBarModule
 	]
 })
 export class BmxSnackbarModule {

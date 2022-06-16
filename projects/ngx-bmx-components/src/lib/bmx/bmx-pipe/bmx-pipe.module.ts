@@ -11,7 +11,8 @@ import { SafeHtmlPipe } from './safe-html.pipe';
 		SafeHtmlPipe
 	],
 	exports: [
-		SafeHtmlPipe
+		SafeHtmlPipe,
+		SafeUrlPipe
 	],
 	imports: [
 		CommonModule

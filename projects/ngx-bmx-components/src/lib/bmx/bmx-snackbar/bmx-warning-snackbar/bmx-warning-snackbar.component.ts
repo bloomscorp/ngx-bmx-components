@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'bmx-warning-snackbar',
-  templateUrl: './bmx-warning-snackbar.component.html',
-  styleUrls: ['./bmx-warning-snackbar.component.scss']
+	selector: 'bmx-warning-snackbar',
+	templateUrl: './bmx-warning-snackbar.component.html',
+	styleUrls: ['./bmx-warning-snackbar.component.scss']
 })
 export class BmxWarningSnackbarComponent implements OnInit {
 
-  constructor() { }
+	constructor() {
+	}
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
 }

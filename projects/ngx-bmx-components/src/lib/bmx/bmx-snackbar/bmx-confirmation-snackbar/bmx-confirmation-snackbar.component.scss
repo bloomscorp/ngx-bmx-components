@@ -3,7 +3,7 @@
 	min-height: 48px;
 	border-radius: 48px;
 
-	@apply px-0 text-gray-800 bg-white dark:bg-gray-700 dark:text-gray-100;
+	@apply px-0 text-gray-800 bg-white;
 
 	div {
 
@@ -15,7 +15,7 @@
 	}
 
 	.bmx-snack-emoji {
-		@apply dark:p-1 dark:rounded-full dark:bg-gray-200 transform transition;
+		@apply transform transition;
 	}
 
 	.bmx-snack-success-button {
@@ -24,7 +24,7 @@
 		border-bottom-right-radius: 48px;
 		cursor: pointer;
 
-		@apply bg-green-100 text-green-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-green-500 transform transition hover:bg-green-50 shadow active:bg-green-200 active:text-green-600 dark:text-green-100 dark:bg-green-500 dark:active:bg-green-600 dark:active:text-green-200;
+		@apply bg-green-100 text-green-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-green-500 transform transition hover:bg-green-50 shadow active:bg-green-200 active:text-green-600;
 	}
 
 	.bmx-snack-warning-button {
@@ -33,6 +33,6 @@
 		border-bottom-left-radius: 48px;
 		cursor: pointer;
 
-		@apply bg-red-100 text-red-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-red-500 transform transition hover:bg-red-50 shadow active:bg-red-200 active:text-red-600 dark:text-red-100 dark:bg-red-100 dark:active:bg-red-600 dark:active:text-red-200;
+		@apply bg-red-100 text-red-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-red-500 transform transition hover:bg-red-50 shadow active:bg-red-200 active:text-red-600;
 	}
 }

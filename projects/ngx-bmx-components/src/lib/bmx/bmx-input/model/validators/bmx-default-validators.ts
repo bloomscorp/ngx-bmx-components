@@ -2,7 +2,6 @@ import {BmxValidator} from "../../interface/bmx-validator";
 import {BmxRequiredValidator} from "./bmx-required-validator";
 import {BmxMinLengthValidator} from "./bmx-min-length-validator";
 import {BmxPatternValidator} from "./bmx-pattern-validator";
-import {Validators} from "@angular/forms";
 import {BmxDefaultEmailValidator} from "./bmx-default-email-validator";
 
 export class BmxDefaultValidators {

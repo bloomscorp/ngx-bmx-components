@@ -1,4 +1,4 @@
-import { RequestMapper } from './request-mapper';
+import {RequestMapper} from './request-mapper';
 
 describe('RequestMapper', () => {
   it('should create an instance', () => {

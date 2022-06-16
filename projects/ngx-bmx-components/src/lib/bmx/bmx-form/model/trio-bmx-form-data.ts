@@ -2,21 +2,27 @@ import {SimpleBmxFormData} from "./simple-bmx-form-data";
 import {BmxInputElement} from "../../bmx-input/interface/bmx-input-element-types";
 import {BmxInput} from "../../bmx-input/interface/bmx-input";
 import {arrayEmpty} from "bmx-pastebox";
-import {BmxRowItem} from "../../bmx-layout/interface/bmx-row-item";
-import {BmxRowLayout} from "../../bmx-layout/interface/bmx-row-layout";
+import {BmxInputRowItem} from "../../bmx-layout/interface/input-layout/bmx-input-row-item";
+import {BmxInputRowLayout} from "../../bmx-layout/interface/input-layout/bmx-input-row-layout";
+import {SimpleBmxButtonLayoutContainer} from "../../bmx-button/bmx-form-button/model/simple-bmx-button-layout-container";
+import {BmxSubmitButton} from "../interface/bmx-submit-button";
 
 export class TrioBmxFormData extends SimpleBmxFormData {
 
 	public constructor(
 		title: string,
 		subTitle: string,
-		inputs: BmxInputElement[]
+		inputs: BmxInputElement[],
+		buttonLayout: SimpleBmxButtonLayoutContainer = SimpleBmxFormData.DEFAULT_BUTTON_LAYOUT_CONTAINER,
+		submit: BmxSubmitButton = SimpleBmxFormData.DEFAULT_FORM_SUBMIT
 	) {
 		TrioBmxFormData.validateInputs(inputs);
 		super(
 			title,
 			subTitle,
-			TrioBmxFormData.prepareTrioRowLayouts(inputs)
+			TrioBmxFormData.prepareTrioRowLayouts(inputs),
+			buttonLayout,
+			submit
 		);
 	}
 
@@ -25,7 +31,7 @@ export class TrioBmxFormData extends SimpleBmxFormData {
 			throw new Error('inputs array in TupleBmxFormData cannot be empty or null!');
 	}
 
-	private static prepareRowItem(id: number, input: BmxInputElement): BmxRowItem {
+	private static prepareRowItem(id: number, input: BmxInputElement): BmxInputRowItem {
 		return {
 			id: id,
 			inputItem: input,
@@ -38,7 +44,7 @@ export class TrioBmxFormData extends SimpleBmxFormData {
 		id1: number, input1: BmxInputElement,
 		id2: number, input2: BmxInputElement,
 		id3: number, input3: BmxInputElement
-	): BmxRowLayout {
+	): BmxInputRowLayout {
 		return {
 			inputItems: [
 				TrioBmxFormData.prepareRowItem(id1, input1),
@@ -48,9 +54,9 @@ export class TrioBmxFormData extends SimpleBmxFormData {
 		};
 	}
 
-	private static prepareTrioRowLayouts(inputs: BmxInputElement[]): BmxRowLayout[] {
+	private static prepareTrioRowLayouts(inputs: BmxInputElement[]): BmxInputRowLayout[] {
 
-		const layouts: BmxRowLayout[] = [];
+		const layouts: BmxInputRowLayout[] = [];
 		const isSizeThird: boolean = inputs.length % 3 == 0;
 		const iteratorMaxValue: number = inputs.length - (isSizeThird ? 1 : (inputs.length % 3 + 1));
 

@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {BmxImageInputElement, BmxInputElement} from "../interface/bmx-input-element-types";
+import {BmxImageInputElement} from "../interface/bmx-input-element-types";
 import {FormControl} from "@angular/forms";
-import {BmxContentInput} from "../interface/bmx-content-input";
 
 @Component({
   selector: 'bmx-nested-input',

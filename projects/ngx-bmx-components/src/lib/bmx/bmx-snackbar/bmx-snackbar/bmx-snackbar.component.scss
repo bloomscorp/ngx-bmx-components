@@ -1,0 +1,76 @@
+.bmx-snack {
+
+	min-height: 48px;
+	border-radius: 48px;
+
+	@apply px-0;
+
+	div {
+
+		@apply px-4 py-2;
+
+		.bmx-snack-message {
+			@apply px-2;
+		}
+	}
+
+	.bmx-snack-emoji {
+		@apply dark:p-1 dark:rounded-full dark:bg-gray-200 transform transition;
+	}
+
+	.bmx-snack-button {
+
+	}
+}
+
+.fr-info-snack {
+	@apply text-gray-800 bg-white dark:bg-gray-700 dark:text-gray-100;
+}
+
+.bmx-snack-info-button {
+
+	border-top-right-radius: 48px;
+	border-bottom-right-radius: 48px;
+	cursor: pointer;
+
+	@apply uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-purple-500 transform transition hover:bg-purple-50 shadow bg-purple-100 text-purple-500 active:bg-purple-200 active:text-purple-600 dark:text-gray-500 dark:bg-gray-100 dark:active:bg-gray-200 dark:active:text-gray-600;
+}
+
+.fr-success-snack {
+	@apply text-gray-800 bg-white dark:bg-gray-700 dark:text-gray-100;
+}
+
+.bmx-snack-success-button {
+
+	border-top-right-radius: 48px;
+	border-bottom-right-radius: 48px;
+	cursor: pointer;
+
+	@apply bg-green-100 text-green-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-green-500 transform transition hover:bg-green-50 shadow active:bg-green-200 active:text-green-600 dark:text-green-100 dark:bg-green-500 dark:active:bg-green-600 dark:active:text-green-200;
+}
+
+.fr-warning-snack {
+	@apply text-gray-800 bg-white dark:bg-gray-700 dark:text-gray-100;
+}
+
+.bmx-snack-warning-button {
+
+	border-top-right-radius: 48px;
+	border-bottom-right-radius: 48px;
+	cursor: pointer;
+
+	@apply bg-yellow-100 text-yellow-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-yellow-500 transform transition hover:bg-yellow-50 shadow active:bg-yellow-200 active:text-yellow-600 dark:text-yellow-100 dark:bg-yellow-500 dark:active:bg-yellow-600 dark:active:text-yellow-200;
+}
+
+.fr-error-snack {
+	@apply bg-red-500 text-red-50;
+}
+
+.bmx-snack-error-button {
+
+	border-top-right-radius: 48px;
+	border-bottom-right-radius: 48px;
+	cursor: pointer;
+
+	@apply bg-yellow-100 text-yellow-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-yellow-500 transform transition hover:bg-yellow-50 shadow active:bg-yellow-200 active:text-yellow-600;
+}

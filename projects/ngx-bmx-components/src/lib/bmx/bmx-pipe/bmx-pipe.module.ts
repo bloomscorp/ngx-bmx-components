@@ -6,12 +6,15 @@ import { SafeHtmlPipe } from './safe-html.pipe';
 
 
 @NgModule({
-  declarations: [
-    SafeUrlPipe,
-    SafeHtmlPipe
-  ],
-  imports: [
-    CommonModule
-  ]
+	declarations: [
+		SafeUrlPipe,
+		SafeHtmlPipe
+	],
+	exports: [
+		SafeHtmlPipe
+	],
+	imports: [
+		CommonModule
+	]
 })
 export class BmxPipeModule { }

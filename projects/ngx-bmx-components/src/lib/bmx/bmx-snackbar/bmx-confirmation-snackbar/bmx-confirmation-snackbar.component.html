@@ -1,1 +1,24 @@
-<p>bmx-confirmation-snackbar works!</p>
+<div>
+	<div fxLayout="row" fxLayoutAlign="space-between stretch" class="fr-fire-snack fr-font-nn">
+		<div fxLayout="row"
+			 fxLayoutAlign="center center"
+			 matTooltip="Reject"
+			 matTooltipPosition="above"
+			 (click)="data.reject!()"
+			 class="fr-fire-snack-button fr-fire-snack-warning-button">
+			<span [innerHTML]="crossEmoji | safeHtml"></span>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="start center">
+			<span [innerHTML]="emoji | safeHtml" class="fr-fire-snack-emoji"></span>
+			<span class="fr-fire-snack-message">{{ data.message }}</span>
+		</div>
+		<div fxLayout="row"
+			 fxLayoutAlign="center center"
+			 matTooltip="Accept"
+			 matTooltipPosition="above"
+			 (click)="accept()"
+			 class="fr-fire-snack-button fr-fire-snack-success-button">
+			<span [innerHTML]="tickEmoji | safeHtml"></span>
+		</div>
+	</div>
+</div>

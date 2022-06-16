@@ -8,6 +8,8 @@ import {BmxInfoSnackbarComponent} from './bmx-info-snackbar/bmx-info-snackbar.co
 import { BmxProgressSnackbarComponent } from './bmx-progress-snackbar/bmx-progress-snackbar.component';
 import { BmxSuccessSnackbarComponent } from './bmx-success-snackbar/bmx-success-snackbar.component';
 import { BmxWarningSnackbarComponent } from './bmx-warning-snackbar/bmx-warning-snackbar.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {BmxPipeModule} from "../bmx-pipe/bmx-pipe.module";
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { BmxWarningSnackbarComponent } from './bmx-warning-snackbar/bmx-warning-
 	],
 	imports: [
 		CommonModule,
-		FlexLayoutModule
+		FlexLayoutModule,
+		MatTooltipModule,
+		BmxPipeModule
 	]
 })
 export class BmxSnackbarModule {

@@ -19,3 +19,5 @@ export * from './lib/bmx/bmx-layout/exports';
 
 export * from './lib/bmx/bmx-ui/bmx-ui.module';
 export * from './lib/bmx/bmx-ui/model/bmx-ui-models';
+
+export * from './lib/bmx/bmx-snackbar/exports';

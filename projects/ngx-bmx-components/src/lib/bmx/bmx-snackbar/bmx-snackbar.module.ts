@@ -31,6 +31,15 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 		BmxPipeModule,
 		MatProgressSpinnerModule,
 		MatSnackBarModule
+	],
+	exports: [
+		BmxSnackbarComponent,
+		BmxConfirmationSnackbarComponent,
+		BmxErrorSnackbarComponent,
+		BmxInfoSnackbarComponent,
+		BmxProgressSnackbarComponent,
+		BmxSuccessSnackbarComponent,
+		BmxWarningSnackbarComponent
 	]
 })
 export class BmxSnackbarModule {

@@ -1,6 +1,13 @@
 import {Injectable} from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {valueExists} from "bmx-pastebox";
+import {BmxInfoSnackbarComponent} from "./bmx-info-snackbar/bmx-info-snackbar.component";
+import {BmxSuccessSnackbarComponent} from "./bmx-success-snackbar/bmx-success-snackbar.component";
+import {BmxWarningSnackbarComponent} from "./bmx-warning-snackbar/bmx-warning-snackbar.component";
+import {BmxErrorSnackbarComponent} from "./bmx-error-snackbar/bmx-error-snackbar.component";
+import {BmxProgressSnackbarComponent} from "./bmx-progress-snackbar/bmx-progress-snackbar.component";
+import {BmxConfirmationSnackbarComponent} from "./bmx-confirmation-snackbar/bmx-confirmation-snackbar.component";
+import {BmxSnackConfirmationData} from "./interface/bmx-snack-confirmation-data";
 
 @Injectable({
 	providedIn: 'root'
@@ -16,7 +23,7 @@ export class BmxSnackbarService {
 	}
 
 	public info(msg: string, emojiCode?: string | null, snackDuration?: number | undefined): void {
-		this._snackbar.openFromComponent(FireInfoSnackComponent, {
+		this._snackbar.openFromComponent(BmxInfoSnackbarComponent, {
 			data: {
 				message: msg,
 				buttonText: 'Okay',
@@ -28,7 +35,7 @@ export class BmxSnackbarService {
 	}
 
 	public success(msg: string, emojiCode?: string | null): void {
-		this._snackbar.openFromComponent(FireSuccessSnackComponent, {
+		this._snackbar.openFromComponent(BmxSuccessSnackbarComponent, {
 			data: {
 				message: msg,
 				buttonText: '👍',
@@ -40,7 +47,7 @@ export class BmxSnackbarService {
 	}
 
 	public warning(msg: string, emojiCode?: string | null): void {
-		this._snackbar.openFromComponent(FireWarningSnackComponent, {
+		this._snackbar.openFromComponent(BmxWarningSnackbarComponent, {
 			data: {
 				message: msg,
 				buttonText: 'Accept',
@@ -52,7 +59,7 @@ export class BmxSnackbarService {
 	}
 
 	public error(msg: string, emojiCode?: string | null): void {
-		this._snackbar.openFromComponent(FireErrorSnackComponent, {
+		this._snackbar.openFromComponent(BmxErrorSnackbarComponent, {
 			data: {
 				message: msg,
 				buttonText: '🙁',
@@ -64,20 +71,20 @@ export class BmxSnackbarService {
 	}
 
 	public progress(msg?: string | null): void {
-		this._snackbar.openFromComponent(FireProgressSnackComponent, {
+		this._snackbar.openFromComponent(BmxProgressSnackbarComponent, {
 			data: {
 				message: (msg == null) ? BmxSnackbarService.WORKING : msg
 			}
 		});
 	}
 
-	public confirmation(data: SnackConfirmationData): void {
+	public confirmation(data: BmxSnackConfirmationData): void {
 
 		data.message = (data.message == null) ? BmxSnackbarService.CONFIRM : data.message;
 		data.reject = (data.reject == null) ? () => this.dismiss() : data.reject;
 		data.injectDismiss = (data.injectDismiss == null) ? true : data.injectDismiss;
 
-		this._snackbar.openFromComponent(FireConfirmationSnackComponent, {
+		this._snackbar.openFromComponent(BmxConfirmationSnackbarComponent, {
 			data: data,
 			duration: 0
 		});

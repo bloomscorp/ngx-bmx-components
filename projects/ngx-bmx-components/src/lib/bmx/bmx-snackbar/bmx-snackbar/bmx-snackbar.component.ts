@@ -1,5 +1,6 @@
 import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import {MAT_SNACK_BAR_DATA, MatSnackBarRef} from "@angular/material/snack-bar";
+import {BmxSnackData} from "../interface/bmx-snack-data";
 
 @Component({
 	selector: 'bmx-snackbar',
@@ -13,8 +14,8 @@ export class BmxSnackbarComponent implements OnDestroy {
 	public emoji: string = '&#x1F469';
 
 	constructor(
-		private _snackbarRef: MatSnackBarRef<FireSnackComponent>,
-		@Inject(MAT_SNACK_BAR_DATA) public data: SnackData
+		private _snackbarRef: MatSnackBarRef<BmxSnackbarComponent>,
+		@Inject(MAT_SNACK_BAR_DATA) public data: BmxSnackData
 	) {
 	}
 

@@ -35,7 +35,11 @@ export class TrioBmxFormData extends SimpleBmxFormData {
 		return {
 			id: id,
 			inputItem: input,
-			flex: 33,
+			flexXL: 33,
+			flexLG: 33,
+			flexMD: 33,
+			flexSM: 100,
+			flexXS: 100,
 			classList: []
 		};
 	}

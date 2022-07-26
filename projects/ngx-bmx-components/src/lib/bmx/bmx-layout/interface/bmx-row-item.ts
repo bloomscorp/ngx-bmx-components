@@ -9,6 +9,10 @@
  */
 export interface BmxRowItem {
 	id: number;
-	flex: number;
+	flexXL: number;
+	flexLG: number;
+	flexMD: number;
+	flexSM: number;
+	flexXS: number;
 	classList: string[];
 }

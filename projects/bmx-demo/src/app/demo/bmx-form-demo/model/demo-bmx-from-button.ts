@@ -18,7 +18,11 @@ export class DemoBmxFromButton {
 
 	public static readonly DEFAULT_BUTTON_ROW_ITEM: BmxButtonRowItem = {
 		id: 0,
-		flex: 100,
+		flexXL: 100,
+		flexLG: 100,
+		flexMD: 100,
+		flexSM: 100,
+		flexXS: 100,
 		classList: [],
 		buttonItem: DemoBmxFromButton.DEFAULT_BUTTON
 	};

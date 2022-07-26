@@ -1,5 +1,5 @@
 <section class="margin-4">
-	<p class="padding-2 capitalize font-bold text-3xl">{{ data.title }}</p>
+	<p class="padding-2 capitalize font-bold text-xl md:text-3xl">{{ data.title }}</p>
 	<p class="padding-2 font-bold text-sm text-gray-400">{{ data.subTitle }}</p>
 	<form [formGroup]="formGroup"
 		  [fxLayout.xs]="data.layout.xs.layout"
@@ -15,14 +15,18 @@
 		  (ngSubmit)="formSubmit()"
 		  class="bmx-form margin-y-3">
 		<div *ngFor="let container of data.layoutContainers; trackBy: trackLayoutContainer"
-			 fxLayout="row"
+			 fxLayout="row wrap"
 			 fxLayoutAlign="start start"
 			 [ngClass]="container.classList">
 			<bmx-input *ngFor="let input of container.group.inputItems; trackBy: trackInputElement"
 						   [data]="input.inputItem"
 						   [formControl]="getFormControl(input.inputItem.name)"
 						   ngDefaultControl
-						   [fxFlex]="input.flex"
+						   [fxFlex.xl]="input.flexXL"
+						   [fxFlex.lg]="input.flexLG"
+						   [fxFlex.md]="input.flexMD"
+						   [fxFlex.sm]="input.flexSM"
+						   [fxFlex.xs]="input.flexXS"
 						   [ngClass]="input.classList"
 						   class="input-padding">like </bmx-input>
 		</div>
@@ -34,7 +38,11 @@
 
 
 	</form>
-	<div fxLayout="row" fxLayoutAlign="end center">
+	<div fxLayout.xs="column"
+		 fxLayout.sm="column"
+		 fxLayout.md="column"
+		 fxLayout.lg="row"
+		 fxLayout.xl="row" fxLayoutAlign="end center">
 		<bmx-form-button *ngFor="let button of data.buttonLayout.group.buttonItems"
 						 [data]="button.buttonItem"
 						 [formGroup]="formGroup"></bmx-form-button>

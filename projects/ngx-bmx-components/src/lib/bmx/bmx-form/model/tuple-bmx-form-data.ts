@@ -37,14 +37,22 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 			return {
 				id: id,
 				inputItem: input,
-				flex: 100,
+				flexXL: 100,
+				flexLG: 100,
+				flexMD: 100,
+				flexSM: 100,
+				flexXS: 100,
 				classList: []
 			};
 		}
 		return {
 			id: id,
 			inputItem: input,
-			flex: 50,
+			flexXL: 50,
+			flexLG: 50,
+			flexMD: 50,
+			flexSM: 100,
+			flexXS: 100,
 			classList: []
 		};
 	}

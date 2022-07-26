@@ -1,0 +1,38 @@
+.bmx-snack {
+
+	min-height: 48px;
+	border-radius: 48px;
+
+	@apply px-0 text-gray-800 bg-white;
+
+	div {
+
+		@apply px-4 py-2;
+
+		.bmx-snack-message {
+			@apply px-2;
+		}
+	}
+
+	.bmx-snack-emoji {
+		@apply transform transition;
+	}
+
+	.bmx-snack-success-button {
+
+		border-top-right-radius: 48px;
+		border-bottom-right-radius: 48px;
+		cursor: pointer;
+
+		@apply bg-green-100 text-green-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-green-500 transform transition hover:bg-green-50 shadow active:bg-green-200 active:text-green-600;
+	}
+
+	.bmx-snack-warning-button {
+
+		border-top-left-radius: 48px;
+		border-bottom-left-radius: 48px;
+		cursor: pointer;
+
+		@apply bg-red-100 text-red-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-red-500 transform transition hover:bg-red-50 shadow active:bg-red-200 active:text-red-600;
+	}
+}

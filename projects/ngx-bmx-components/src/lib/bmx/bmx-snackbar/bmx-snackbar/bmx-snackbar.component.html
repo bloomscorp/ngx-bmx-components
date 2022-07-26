@@ -1,0 +1,16 @@
+<div>
+	<div [ngClass]="[containerClass]" fxLayout="row" fxLayoutAlign="space-between stretch" class="bmx-snack fr-font-nn">
+		<div fxLayout="row" fxLayoutAlign="start center">
+			<span [innerHTML]="data.emoji | safeHtml" class="bmx-snack-emoji"></span>
+			<span class="bmx-snack-message">{{ data.message }}</span>
+		</div>
+		<div *ngIf="data.hasButton"
+			 fxLayout="row"
+			 fxLayoutAlign="center center"
+			 [ngClass]="buttonClass"
+			 (click)="dismiss()"
+			 class="bmx-snack-button">
+			{{ data.buttonText }}
+		</div>
+	</div>
+</div>

@@ -8,9 +8,9 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
-import { BmxImageInputComponent } from './bmx-image-input/bmx-image-input.component';
+import {BmxImageInputComponent} from './bmx-image-input/bmx-image-input.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
-import { BmxNestedInputComponent } from './bmx-nested-input/bmx-nested-input.component';
+import {BmxNestedInputComponent} from './bmx-nested-input/bmx-nested-input.component';
 
 
 @NgModule({

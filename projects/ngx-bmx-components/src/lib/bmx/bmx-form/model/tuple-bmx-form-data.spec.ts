@@ -1,4 +1,4 @@
-import { TupleBmxFormData } from './tuple-bmx-form-data';
+import {TupleBmxFormData} from './tuple-bmx-form-data';
 
 describe('TupleBmxFormData', () => {
   it('should create an instance', () => {

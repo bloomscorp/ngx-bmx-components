@@ -13,3 +13,11 @@ export * from './lib/bmx/bmx-form/bmx-form/bmx-form.component';
 
 export * from './lib/bmx/bmx-form/model/bmx-form-models';
 export * from './lib/bmx/bmx-input/model/bmx-input-models';
+
+export * from './lib/bmx/bmx-button/exports';
+export * from './lib/bmx/bmx-layout/exports';
+
+export * from './lib/bmx/bmx-ui/bmx-ui.module';
+export * from './lib/bmx/bmx-ui/model/bmx-ui-models';
+
+export * from './lib/bmx/bmx-snackbar/exports';

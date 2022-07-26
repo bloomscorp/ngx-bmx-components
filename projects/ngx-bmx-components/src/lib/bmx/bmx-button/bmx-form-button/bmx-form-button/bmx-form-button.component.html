@@ -1,0 +1,18 @@
+<ng-container [ngSwitch]="buttonData.inputType">
+	<ng-container *ngSwitchCase="0">
+		<bmx-confirm-form-button [data]="buttonData" [formGroup]="formGroup"></bmx-confirm-form-button>
+	</ng-container>
+	<ng-container *ngSwitchCase="1">
+		<bmx-danger-form-button [data]="buttonData" [formGroup]="formGroup"></bmx-danger-form-button>
+	</ng-container>
+	<ng-container *ngSwitchCase="2">
+		<bmx-info-form-button [data]="buttonData" [formGroup]="formGroup"></bmx-info-form-button>
+	</ng-container>
+	<ng-container *ngSwitchCase="3">
+		<bmx-warn-form-button [data]="buttonData" [formGroup]="formGroup"></bmx-warn-form-button>
+	</ng-container>
+	<ng-container *ngSwitchCase="4">
+		<bmx-extra-form-button [data]="buttonData" [formGroup]="formGroup"></bmx-extra-form-button>
+	</ng-container>
+	<ng-container *ngSwitchDefault></ng-container>
+</ng-container>

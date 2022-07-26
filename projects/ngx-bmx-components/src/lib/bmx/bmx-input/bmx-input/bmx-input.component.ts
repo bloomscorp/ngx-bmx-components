@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {BmxContentInput} from "../interface/bmx-content-input";
 import {FormControl} from "@angular/forms";
 import {BmxInputElement} from "../interface/bmx-input-element-types";
 
@@ -25,9 +24,5 @@ export class BmxInputComponent implements OnInit {
 				validator => validator.validator
 			)
 		);
-	}
-
-	public castToContentInput(): BmxInputElement {
-		return <BmxContentInput>this.data;
 	}
 }

@@ -1,0 +1,76 @@
+.bmx-snack {
+
+	min-height: 48px;
+	border-radius: 48px;
+
+	@apply px-0;
+
+	div {
+
+		@apply px-4 py-2;
+
+		.bmx-snack-message {
+			@apply px-2;
+		}
+	}
+
+	.bmx-snack-emoji {
+		@apply transform transition;
+	}
+
+	.bmx-snack-button {
+
+	}
+}
+
+.fr-info-snack {
+	@apply text-gray-800 bg-white;
+}
+
+.bmx-snack-info-button {
+
+	border-top-right-radius: 48px;
+	border-bottom-right-radius: 48px;
+	cursor: pointer;
+
+	@apply uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-purple-500 transform transition hover:bg-purple-50 shadow bg-purple-100 text-purple-500 active:bg-purple-200 active:text-purple-600;
+}
+
+.fr-success-snack {
+	@apply text-gray-800 bg-white;
+}
+
+.bmx-snack-success-button {
+
+	border-top-right-radius: 48px;
+	border-bottom-right-radius: 48px;
+	cursor: pointer;
+
+	@apply bg-green-100 text-green-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-green-500 transform transition hover:bg-green-50 shadow active:bg-green-200 active:text-green-600;
+}
+
+.fr-warning-snack {
+	@apply text-gray-800 bg-white;
+}
+
+.bmx-snack-warning-button {
+
+	border-top-right-radius: 48px;
+	border-bottom-right-radius: 48px;
+	cursor: pointer;
+
+	@apply bg-yellow-100 text-yellow-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-yellow-500 transform transition hover:bg-yellow-50 shadow active:bg-yellow-200 active:text-yellow-600;
+}
+
+.fr-error-snack {
+	@apply bg-red-500 text-red-50;
+}
+
+.bmx-snack-error-button {
+
+	border-top-right-radius: 48px;
+	border-bottom-right-radius: 48px;
+	cursor: pointer;
+
+	@apply bg-yellow-100 text-yellow-500 uppercase tracking-wider text-sm focus:outline-none focus:ring focus:ring-yellow-500 transform transition hover:bg-yellow-50 shadow active:bg-yellow-200 active:text-yellow-600;
+}

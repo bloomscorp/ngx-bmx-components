@@ -1,0 +1,11 @@
+.bmx-progress-snack {
+
+	min-height: 48px;
+	border-radius: 48px;
+
+	@apply px-6 py-2;
+
+	div {
+		@apply text-gray-600 ml-3;
+	}
+}

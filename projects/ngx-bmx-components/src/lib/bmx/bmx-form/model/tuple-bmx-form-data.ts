@@ -1,11 +1,12 @@
 import {SimpleBmxFormData} from "./simple-bmx-form-data";
 import {BmxInput} from "../../bmx-input/interface/bmx-input";
-import {BmxRowLayout} from "../../bmx-layout/interface/bmx-row-layout";
-import {BmxRowItem} from "../../bmx-layout/interface/bmx-row-item";
+import {BmxInputRowLayout} from "../../bmx-layout/interface/input-layout/bmx-input-row-layout";
+import {BmxInputRowItem} from "../../bmx-layout/interface/input-layout/bmx-input-row-item";
 import {BmxInputElement} from "../../bmx-input/interface/bmx-input-element-types";
 import {arrayEmpty} from 'bmx-pastebox';
 import {BmxSubmitButton} from "../interface/bmx-submit-button";
 import {BmxInputType} from "../../bmx-input/interface/bmx-input-type";
+import {SimpleBmxButtonLayoutContainer} from "../../bmx-button/bmx-form-button/model/simple-bmx-button-layout-container";
 
 export class TupleBmxFormData extends SimpleBmxFormData {
 
@@ -13,6 +14,7 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 		title: string,
 		subTitle: string,
 		inputs: BmxInputElement[],
+		buttonLayout: SimpleBmxButtonLayoutContainer = SimpleBmxFormData.DEFAULT_BUTTON_LAYOUT_CONTAINER,
 		submit: BmxSubmitButton = SimpleBmxFormData.DEFAULT_FORM_SUBMIT
 	) {
 		TupleBmxFormData.validateInputs(inputs);
@@ -20,6 +22,7 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 			title,
 			subTitle,
 			TupleBmxFormData.prepareTupleRowLayouts(inputs),
+			buttonLayout,
 			submit
 		);
 	}
@@ -29,24 +32,32 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 			throw new Error('inputs array in TupleBmxFormData cannot be empty or null!');
 	}
 
-	private static prepareRowItem(id: number, input: BmxInputElement): BmxRowItem {
+	private static prepareRowItem(id: number, input: BmxInputElement): BmxInputRowItem {
 		if (input.inputType === BmxInputType.IMAGE) {
 			return {
 				id: id,
 				inputItem: input,
-				flex: 100,
+				flexXL: 100,
+				flexLG: 100,
+				flexMD: 100,
+				flexSM: 100,
+				flexXS: 100,
 				classList: []
 			};
 		}
 		return {
 			id: id,
 			inputItem: input,
-			flex: 50,
+			flexXL: 50,
+			flexLG: 50,
+			flexMD: 50,
+			flexSM: 100,
+			flexXS: 100,
 			classList: []
 		};
 	}
 
-	private static prepareRowLayout(id1: number, input1: BmxInputElement, id2: number, input2: BmxInputElement): BmxRowLayout {
+	private static prepareRowLayout(id1: number, input1: BmxInputElement, id2: number, input2: BmxInputElement): BmxInputRowLayout {
 		return {
 			inputItems: [
 				TupleBmxFormData.prepareRowItem(id1, input1),
@@ -55,9 +66,9 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 		};
 	}
 
-	private static prepareTupleRowLayouts(inputs: BmxInputElement[]): BmxRowLayout[] {
+	private static prepareTupleRowLayouts(inputs: BmxInputElement[]): BmxInputRowLayout[] {
 
-		const layouts: BmxRowLayout[] = [];
+		const layouts: BmxInputRowLayout[] = [];
 		const isSizeEven: boolean = inputs.length % 2 == 0;
 		const iteratorMaxValue: number = inputs.length - (isSizeEven ? 1 : 2);
 

@@ -14,11 +14,11 @@
 }
 
 .padding-2 {
-	padding: 0.5rem;
+	padding: 0.2rem;
 }
 
 .margin-4 {
-	margin: 1rem;
+		margin: .5rem;
 }
 
 .margin-y-3 {
@@ -29,5 +29,9 @@
 @media (min-width: 768px) {
 	.margin-4 {
 		margin: 2rem;
+	}
+
+	.padding-2 {
+		padding: 0.5rem;
 	}
 }

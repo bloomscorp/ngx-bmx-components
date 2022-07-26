@@ -1,4 +1,4 @@
-import { DemoBmxInput } from './demo-bmx-input';
+import {DemoBmxInput} from './demo-bmx-input';
 
 describe('DemoBmxInput', () => {
   it('should create an instance', () => {

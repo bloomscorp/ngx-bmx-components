@@ -1,0 +1,14 @@
+.bmx-confirm-form-btn {
+	padding: 0.5rem;
+	margin: 1rem;
+	width: 250px;
+	background: #66bb6a ;
+	color: white;
+
+	text-transform: capitalize;
+	border-radius: 0.25rem;
+
+	&:hover {
+		background: #1b5e20;
+	}
+}

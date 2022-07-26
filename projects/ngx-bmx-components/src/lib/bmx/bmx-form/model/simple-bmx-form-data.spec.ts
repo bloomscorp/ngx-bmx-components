@@ -1,4 +1,4 @@
-import { SimpleBmxFormData } from './simple-bmx-form-data';
+import {SimpleBmxFormData} from './simple-bmx-form-data';
 
 describe('SimpleBmxFormData', () => {
   it('should create an instance', () => {

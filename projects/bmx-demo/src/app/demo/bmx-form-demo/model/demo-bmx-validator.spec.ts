@@ -1,4 +1,4 @@
-import { DemoBmxValidator } from './demo-bmx-validator';
+import {DemoBmxValidator} from './demo-bmx-validator';
 
 describe('DemoBmxValidator', () => {
   it('should create an instance', () => {

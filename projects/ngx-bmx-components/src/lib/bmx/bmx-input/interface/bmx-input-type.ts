@@ -3,5 +3,6 @@ export enum BmxInputType {
 	SELECT,
 	RADIO,
 	TEXT_AREA,
-	IMAGE
+	IMAGE,
+	AUTOCOMPLETE
 }

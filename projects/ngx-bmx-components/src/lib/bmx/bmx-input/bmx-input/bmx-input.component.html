@@ -11,5 +11,9 @@
 	<ng-container *ngSwitchCase="4">
 		<bmx-image-input [bmxData]="data" [formControl]="formControl" ngDefaultControl></bmx-image-input>
 	</ng-container>
+	<ng-container *ngSwitchCase="5">
+		<bmx-autocomplete-input [bmxData]="data"
+								[formControl]="formControl" ngDefaultControl></bmx-autocomplete-input>
+	</ng-container>
 	<ng-container *ngSwitchDefault></ng-container>
 </ng-container>

@@ -2,19 +2,19 @@
 	<mat-label>{{ data.label }}</mat-label>
 	<input type="text"
 		   placeholder="{{ data.placeholder }}"
-		   aria-label="{{ data.label }}"
+		   [attr.aria-label]="data.label"
 		   matInput
 		   [formControl]="formControl"
 		   [matAutocomplete]="auto">
 	<mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
 		<mat-option *ngFor="let option of filteredOptions | async; trackBy: trackItems"
-					[value]="option">
+					[value]="option.value">
 			<section fxLayout="row"
 					 fxLayoutAlign="start center"
 					 class="r-search-card py-2 r-default-transition cursor-pointer">
 				<img *ngIf="option.image"
 					 [src]="option.image"
-					 class="r-sac-icon mr-1 md:mr-3 r-default-transition" alt="bmx autocomplete dp">
+					 class="r-sac-icon r-default-transition" alt="bmx autocomplete dp">
 				<div class="r-sac-info md:ml-0.5">
 					<h1 class="font-bold text-sm py-0.5 capitalize">
 						{{option.title}}

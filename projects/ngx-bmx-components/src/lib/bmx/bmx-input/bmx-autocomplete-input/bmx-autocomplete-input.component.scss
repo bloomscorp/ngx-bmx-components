@@ -1,32 +1,45 @@
-.bmx-autocomplete {
-	mat-option {
-		height: 160px !important;
+
+.r-search-card {
+	background: #ffffff;
+	width: 100%;
+
+
+	.r-sac-info {
+		white-space: nowrap;
+		width: 98%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: #5A6268;
 	}
 
-	.r-search-card {
-		background: #ffffff;
-		width: 100%;
-
-		.r-sac-icon {
-			@apply w-8 h-8 md:w-16 md:h-16 object-center object-cover rounded;
-		}
-
+	&:hover {
 		.r-sac-info {
-			white-space: nowrap;
-			width: 98%;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-
-		&:hover {
-			.r-sac-info {
-				h1 {
-					color: #0d47a1;
-				}
+			h1 {
+				color: black;
 			}
-
-			background: linear-gradient(145deg, #e6e6e6, #ffffff);
 		}
+
+		background: linear-gradient(145deg, #e6e6e6, #ffffff);
 	}
 }
 
+mat-option {
+	height: 80px !important;
+}
+
+
+.r-sac-icon {
+	width: 2rem;
+	height: 2rem;
+	margin-right: 0.25rem;
+
+	@media (min-width: 768px) {
+		width: 4rem;
+		height: 4rem;
+		margin-right: 0.75rem;
+	}
+	object-position: center;
+	object-fit: cover;
+	border-radius: 0.25rem;
+
+}

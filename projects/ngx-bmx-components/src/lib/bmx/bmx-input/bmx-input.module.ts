@@ -11,6 +11,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {BmxImageInputComponent} from './bmx-image-input/bmx-image-input.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {BmxNestedInputComponent} from './bmx-nested-input/bmx-nested-input.component';
+import { BmxAutocompleteInputComponent } from './bmx-autocomplete-input/bmx-autocomplete-input.component';
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import {BmxNestedInputComponent} from './bmx-nested-input/bmx-nested-input.compo
 		BmxSelectInputComponent,
 		BmxTextAreaInputComponent,
 		BmxImageInputComponent,
-  BmxNestedInputComponent
+  BmxNestedInputComponent,
+  BmxAutocompleteInputComponent
 	],
 	exports: [
 		BmxInputComponent
@@ -31,7 +34,8 @@ import {BmxNestedInputComponent} from './bmx-nested-input/bmx-nested-input.compo
         MatInputModule,
         ReactiveFormsModule,
         MatSelectModule,
-        FlexLayoutModule
+        FlexLayoutModule,
+        MatAutocompleteModule
     ]
 })
 export class BmxInputModule {

@@ -2,10 +2,9 @@ import {Component, Input, OnInit} from '@angular/core';
 import {BmxInputElement} from "../interface/bmx-input-element-types";
 import {FormControl} from "@angular/forms";
 import {BmxAutocompleteInput} from "../interface/bmx-autocomplete-input";
-import {BmxSelectInput} from "../interface/bmx-select-input";
-import {BmxSelectInputExtendedItem} from "../interface/bmx-select-input-extended-item";
 import {BmxAutocompleteExtendedItem} from "../interface/bmx-autocomplete-extended-item";
-import {map, Observable, startWith} from "rxjs";
+import {Observable} from "rxjs";
+import { map ,startWith } from "rxjs/operators";
 
 @Component({
 	selector: 'bmx-autocomplete-input',

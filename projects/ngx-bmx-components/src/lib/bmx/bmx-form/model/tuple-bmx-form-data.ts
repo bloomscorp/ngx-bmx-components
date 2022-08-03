@@ -33,18 +33,6 @@ export class TupleBmxFormData extends SimpleBmxFormData {
 	}
 
 	private static prepareRowItem(id: number, input: BmxInputElement): BmxInputRowItem {
-		if (input.inputType === BmxInputType.IMAGE) {
-			return {
-				id: id,
-				inputItem: input,
-				flexXL: 100,
-				flexLG: 100,
-				flexMD: 100,
-				flexSM: 100,
-				flexXS: 100,
-				classList: []
-			};
-		}
 		return {
 			id: id,
 			inputItem: input,

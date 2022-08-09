@@ -1,6 +1,7 @@
 <mat-form-field class="bmx-input bmx-autocomplete w-full text-sm" [appearance]="data.appearance">
 	<mat-label>{{ data.label }}</mat-label>
 	<input type="text"
+		   [name]="data.name"
 		   placeholder="{{ data.placeholder }}"
 		   [attr.aria-label]="data.label"
 		   matInput
@@ -8,7 +9,7 @@
 		   [matAutocomplete]="auto">
 	<mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
 		<mat-option *ngFor="let option of filteredOptions | async; trackBy: trackItems"
-					[value]="option.value">
+					[value]="option.title">
 			<section fxLayout="row"
 					 fxLayoutAlign="start center"
 					 class="r-search-card py-2 r-default-transition cursor-pointer">

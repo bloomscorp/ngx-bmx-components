@@ -15,5 +15,8 @@
 		<bmx-autocomplete-input [bmxData]="data"
 								[formControl]="formControl" ngDefaultControl></bmx-autocomplete-input>
 	</ng-container>
+	<ng-container *ngSwitchCase="6">
+		<bmx-datepicker-input [bmxData]="data" [formControl]="formControl" ngDefaultControl></bmx-datepicker-input>
+	</ng-container>
 	<ng-container *ngSwitchDefault></ng-container>
 </ng-container>

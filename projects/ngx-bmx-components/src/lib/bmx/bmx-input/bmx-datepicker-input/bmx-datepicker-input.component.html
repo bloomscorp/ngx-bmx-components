@@ -1,0 +1,19 @@
+<mat-form-field class="bmx-input w-full text-sm" [appearance]="data.appearance">
+	<mat-label>{{data.label}}</mat-label>
+	<input [name]="data.name"
+		   matInput
+		   [min]="data.minDate"
+		   [max]="data.maxDate"
+		   [formControl]="formControl"
+		   [placeholder]="data.placeholder"
+		   [matDatepicker]="picker">
+	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
+	<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+	<mat-datepicker #picker></mat-datepicker>
+	<mat-error *ngFor="let error of data.validators">
+		<ng-container *ngIf="(formControl.pristine || formControl.dirty)
+							&& formControl.hasError(error.errorCode)">
+			{{ error.message }}
+		</ng-container>
+	</mat-error>
+</mat-form-field>

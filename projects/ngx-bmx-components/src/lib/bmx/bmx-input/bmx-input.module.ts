@@ -13,6 +13,9 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {BmxNestedInputComponent} from './bmx-nested-input/bmx-nested-input.component';
 import { BmxAutocompleteInputComponent } from './bmx-autocomplete-input/bmx-autocomplete-input.component';
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import { BmxDatepickerInputComponent } from './bmx-datepicker-input/bmx-datepicker-input.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
 
 
 @NgModule({
@@ -22,22 +25,29 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
 		BmxSelectInputComponent,
 		BmxTextAreaInputComponent,
 		BmxImageInputComponent,
-  BmxNestedInputComponent,
-  BmxAutocompleteInputComponent
+		BmxNestedInputComponent,
+		BmxAutocompleteInputComponent,
+		BmxDatepickerInputComponent
 	],
 	exports: [
 		BmxInputComponent
 	],
-    imports: [
-        CommonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        MatSelectModule,
-        FlexLayoutModule,
-        MatAutocompleteModule
-    ]
+	imports: [
+		CommonModule,
+		MatFormFieldModule,
+		MatInputModule,
+		ReactiveFormsModule,
+		MatSelectModule,
+		FlexLayoutModule,
+		MatAutocompleteModule,
+		MatDatepickerModule,
+		MatNativeDateModule
+	],
+	providers: [
+		{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
+	]
 })
 export class BmxInputModule {
+
 
 }

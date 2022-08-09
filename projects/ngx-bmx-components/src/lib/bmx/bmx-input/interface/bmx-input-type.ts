@@ -4,5 +4,6 @@ export enum BmxInputType {
 	RADIO,
 	TEXT_AREA,
 	IMAGE,
-	AUTOCOMPLETE
+	AUTOCOMPLETE,
+	DATEPICKER
 }

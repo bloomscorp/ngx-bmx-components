@@ -16,6 +16,12 @@ import {
 import {
 	BmxSimpleAutocompleteInput
 } from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/autocomplete-input/bmx-simple-autocomplete-input";
+import {
+	BmxDatepickerInput
+} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/interface/bmx-datepicker-input";
+import {
+	BmxDefaultDatepickerInput
+} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/datepicker-input/bmx-default-datepicker-input";
 
 export class DemoBmxInput {
 
@@ -37,6 +43,17 @@ export class DemoBmxInput {
 		'phone',
 		'',
 		'+919831126234'
+	);
+
+	public static dateInput: BmxDatepickerInput = BmxDefaultDatepickerInput.getInstance(
+		'Date Picker',
+		'Enter your date of birth',
+		'dob',
+		'',
+		'13/08/99',
+		[],
+		{} as Date,
+		new Date()
 	);
 
 	public static genderSelect: BmxSelectInput = BmxSingleSelectInput.getInstance(

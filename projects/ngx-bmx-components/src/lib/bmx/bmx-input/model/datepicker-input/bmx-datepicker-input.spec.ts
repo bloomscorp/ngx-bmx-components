@@ -1,7 +1,7 @@
-import { BmxDatepickerInput } from './bmx-datepicker-input';
+import { BmxDefaultDatepickerInput } from './bmx-datepicker-input';
 
 describe('BmxDatepickerInput', () => {
   it('should create an instance', () => {
-    expect(new BmxDatepickerInput()).toBeTruthy();
+    expect(new BmxDefaultDatepickerInput()).toBeTruthy();
   });
 });

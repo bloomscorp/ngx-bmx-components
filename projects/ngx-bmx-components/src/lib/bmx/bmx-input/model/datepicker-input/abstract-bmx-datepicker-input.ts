@@ -16,7 +16,9 @@ export class AbstractBmxDatepickerInput implements BmxDatepickerInput {
 		public value: string,
 		public placeholder: string,
 		public readOnly: boolean = false,
-		public validators: BmxValidator[] = []
+		public validators: BmxValidator[] = [],
+		public minDate: Date,
+		public maxDate: Date
 	) {
 	}
 }

@@ -2,6 +2,8 @@
 	<mat-label>{{data.label}}</mat-label>
 	<input [name]="data.name"
 		   matInput
+		   [min]="data.minDate"
+		   [max]="data.maxDate"
 		   [formControl]="formControl"
 		   [placeholder]="data.placeholder"
 		   [matDatepicker]="picker">

@@ -2,7 +2,7 @@ import {AbstractBmxDatepickerInput} from "./abstract-bmx-datepicker-input";
 import {MatFormFieldAppearance} from "@angular/material/form-field";
 import {BmxValidator} from "../../interface/bmx-validator";
 
-export class BmxDatepickerInput extends AbstractBmxDatepickerInput {
+export class BmxDefaultDatepickerInput extends AbstractBmxDatepickerInput {
 
 	public constructor(
 		appearance: MatFormFieldAppearance = 'outline',
@@ -13,7 +13,9 @@ export class BmxDatepickerInput extends AbstractBmxDatepickerInput {
 		value: string,
 		placeholder: string,
 		readOnly: boolean = false,
-		validators: BmxValidator[] = []
+		validators: BmxValidator[] = [],
+		minDate: Date = {} as Date,
+		maxDate: Date = {} as Date
 	) {
 		super(
 			appearance,
@@ -24,7 +26,9 @@ export class BmxDatepickerInput extends AbstractBmxDatepickerInput {
 			value,
 			placeholder,
 			readOnly,
-			validators
+			validators,
+			minDate,
+			maxDate
 		);
 	}
 
@@ -34,9 +38,11 @@ export class BmxDatepickerInput extends AbstractBmxDatepickerInput {
 		name: string,
 		value: string = '',
 		placeholder: string,
-		validators: BmxValidator[] = []
-	): BmxDatepickerInput {
-		return new BmxDatepickerInput(
+		validators: BmxValidator[] = [],
+		minDate: Date = {} as Date,
+		maxDate: Date = {} as Date
+	): BmxDefaultDatepickerInput {
+		return new BmxDefaultDatepickerInput(
 			'outline',
 			false,
 			label,
@@ -45,7 +51,9 @@ export class BmxDatepickerInput extends AbstractBmxDatepickerInput {
 			value,
 			placeholder,
 			false,
-			validators
+			validators,
+			minDate,
+			maxDate
 		);
 	}
 }

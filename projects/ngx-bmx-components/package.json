@@ -1,6 +1,6 @@
 {
 	"name": "ngx-bmx-components",
-	"version": "0.1.7",
+	"version": "0.1.8",
 	"description": "Collection of angular UI components developed for Bloomscorp's internal projects",
 	"author": {
 		"name": "Debabrata Acharya",

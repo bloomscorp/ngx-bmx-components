@@ -18,7 +18,5 @@ export interface BmxFormData {
 	subTitle: string;
 	layoutContainers: BmxInputLayoutContainer[];
 	buttonLayout: BmxButtonLayoutContainer;
-	// TODO: remove
-	submit: BmxSubmitButton;
 	layout: BmxLayout;
 }

@@ -22,6 +22,9 @@ import {
 import {
 	BmxDefaultDatepickerInput
 } from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/datepicker-input/bmx-default-datepicker-input";
+import {
+	BmxPasswordInput
+} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/content-input/bmx-password-input";
 
 export class DemoBmxInput {
 
@@ -43,6 +46,14 @@ export class DemoBmxInput {
 		'phone',
 		'',
 		'+919831126234'
+	);
+
+	public static passwordInput: BmxContentInput = BmxPasswordInput.getInstance(
+		'Password',
+		'Enter your password',
+		'password',
+		'',
+		'dsd87fhsgfysg'
 	);
 
 	public static dateInput: BmxDatepickerInput = BmxDefaultDatepickerInput.getInstance(

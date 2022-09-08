@@ -19,14 +19,6 @@ export class DemoBmxFormData {
 			DemoBmxInput.imageInput,
 			DemoBmxInput.passwordInput
 		],
-		DemoBmxFromButton.contactFormButton,
-		{
-			title: 'submit',
-			classList: [],
-			onSubmit: (formGroup: FormGroup) => {
-				console.log(formGroup);
-			},
-			validateBeforeSubmit: true
-		}
+		DemoBmxFromButton.contactFormButton
 	);
 }

@@ -18,14 +18,6 @@ export class DemoBmxFormData {
 			DemoBmxInput.textAreaInput,
 			DemoBmxInput.imageInput
 		],
-		DemoBmxFromButton.contactFormButton,
-		{
-			title: 'submit',
-			classList: [],
-			onSubmit: (formGroup: FormGroup) => {
-				console.log(formGroup);
-			},
-			validateBeforeSubmit: true
-		}
+		DemoBmxFromButton.contactFormButton
 	);
 }

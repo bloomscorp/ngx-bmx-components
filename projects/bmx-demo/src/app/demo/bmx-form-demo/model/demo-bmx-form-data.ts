@@ -16,7 +16,8 @@ export class DemoBmxFormData {
 			DemoBmxInput.genderSelect,
 			DemoBmxInput.codeAutocomplete,
 			DemoBmxInput.textAreaInput,
-			DemoBmxInput.imageInput
+			DemoBmxInput.imageInput,
+			DemoBmxInput.passwordInput
 		],
 		DemoBmxFromButton.contactFormButton
 	);

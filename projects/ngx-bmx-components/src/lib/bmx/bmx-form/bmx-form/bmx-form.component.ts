@@ -15,7 +15,6 @@ import {AbstractBmxForm} from "../model/abstract-bmx-form";
 })
 export class BmxFormComponent extends AbstractBmxForm implements OnInit {
 
-
 	@Input()
 	public override data: BmxFormData = {} as BmxFormData;
 

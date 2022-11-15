@@ -4,6 +4,7 @@ export class RequestMapper {
 	public static readonly ROOT_URL: string = '/';
 	public static readonly DEMO_URL: string = 'demo';
 	public static readonly BMX_FORM_URL: string = 'bmx-form';
+	public static readonly GLASSMORPHIC_URL: string = 'glassmorphic';
 
 	private constructor() {
 	}

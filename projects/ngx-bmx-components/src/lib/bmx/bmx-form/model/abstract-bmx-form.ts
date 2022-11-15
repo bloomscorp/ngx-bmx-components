@@ -4,7 +4,7 @@ import {BmxInputLayoutContainer} from "../../bmx-layout/interface/input-layout/b
 import {BmxInputRowItem} from "../../bmx-layout/interface/input-layout/bmx-input-row-item";
 import {BmxFormData} from "../interface/bmx-form-data";
 
-export class AbstractBmxForm implements BmxForm {
+export abstract class AbstractBmxForm implements BmxForm {
 
 	public formGroup: FormGroup = {} as FormGroup;
 	public data: BmxFormData = {} as BmxFormData;
@@ -23,6 +23,11 @@ export class AbstractBmxForm implements BmxForm {
 	}
 
 	public getFormControl(name: string): FormControl {
+
+		if (Object.keys(this.controls).length === 0) {
+			console.error("Form controls are empty. Check if you have called AbstractBmxForm#init() within your ngOnInit()!");
+		}
+
 		return <FormControl>this.controls[name];
 	}
 

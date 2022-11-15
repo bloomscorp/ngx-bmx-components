@@ -1,1 +1,43 @@
-<p>bmx-form-glassmorphic works!</p>
+<section class="margin-4">
+	<p class="padding-2 capitalize font-bold text-xl md:text-3xl">{{ data.title }}</p>
+	<p class="padding-2 font-bold text-sm text-gray-400">{{ data.subTitle }}</p>
+	<form [formGroup]="formGroup"
+		  [fxLayout.xs]="data.layout.xs.layout"
+		  [fxLayout.sm]="data.layout.sm.layout"
+		  [fxLayout.md]="data.layout.md.layout"
+		  [fxLayout.lg]="data.layout.lg.layout"
+		  [fxLayout.xl]="data.layout.xl.layout"
+		  [fxLayoutAlign.xs]="data.layout.xs.align"
+		  [fxLayoutAlign.sm]="data.layout.sm.align"
+		  [fxLayoutAlign.md]="data.layout.md.align"
+		  [fxLayoutAlign.lg]="data.layout.lg.align"
+		  [fxLayoutAlign.xl]="data.layout.xl.align"
+		  class="bmx-form margin-y-3">
+		<div *ngFor="let container of data.layoutContainers; trackBy: trackLayoutContainer"
+			 fxLayout="row wrap"
+			 fxLayoutAlign="start start"
+			 [ngClass]="container.classList">
+			works!
+<!--			<bmx-input *ngFor="let input of container.group.inputItems; trackBy: trackInputElement"-->
+<!--					   [data]="input.inputItem"-->
+<!--					   [formControl]="getFormControl(input.inputItem.name)"-->
+<!--					   ngDefaultControl-->
+<!--					   [fxFlex.xl]="input.flexXL"-->
+<!--					   [fxFlex.lg]="input.flexLG"-->
+<!--					   [fxFlex.md]="input.flexMD"-->
+<!--					   [fxFlex.sm]="input.flexSM"-->
+<!--					   [fxFlex.xs]="input.flexXS"-->
+<!--					   [ngClass]="input.classList"-->
+<!--					   class="input-padding">like </bmx-input>-->
+		</div>
+	</form>
+	<div fxLayout.xs="column"
+		 fxLayout.sm="column"
+		 fxLayout.md="column"
+		 fxLayout.lg="row"
+		 fxLayout.xl="row" fxLayoutAlign="end center">
+<!--		<bmx-form-button *ngFor="let button of data.buttonLayout.group.buttonItems"-->
+<!--						 [data]="button.buttonItem"-->
+<!--						 [formGroup]="formGroup"></bmx-form-button>-->
+	</div>
+</section>

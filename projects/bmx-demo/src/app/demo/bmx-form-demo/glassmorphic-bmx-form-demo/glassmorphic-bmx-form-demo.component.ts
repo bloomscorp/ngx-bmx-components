@@ -3,11 +3,11 @@ import {BmxFormData} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-
 import {DemoBmxFormData} from "../model/demo-bmx-form-data";
 
 @Component({
-	selector: 'app-bmx-form-demo',
-	templateUrl: './bmx-form-demo.component.html',
-	styleUrls: ['./bmx-form-demo.component.scss']
+	selector: 'app-glassmorphic-bmx-form-demo',
+	templateUrl: './glassmorphic-bmx-form-demo.component.html',
+	styleUrls: ['./glassmorphic-bmx-form-demo.component.scss']
 })
-export class BmxFormDemoComponent implements OnInit {
+export class GlassmorphicBmxFormDemoComponent implements OnInit {
 
 	public contactForm: BmxFormData = DemoBmxFormData.contactForm;
 

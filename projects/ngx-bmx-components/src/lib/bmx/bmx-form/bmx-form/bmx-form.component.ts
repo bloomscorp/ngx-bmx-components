@@ -5,13 +5,14 @@ import {BmxInputLayoutContainer} from "../../bmx-layout/interface/input-layout/b
 import {BmxInputRowItem} from "../../bmx-layout/interface/input-layout/bmx-input-row-item";
 import {BmxFormButton} from "../../bmx-button/bmx-form-button/interface/bmx-form-button";
 import {BmxFormButtonType} from "../../bmx-button/bmx-form-button/interface/bmx-form-button-type";
+import {BmxForm} from "../interface/bmx-form";
 
 @Component({
 	selector: 'bmx-form',
 	templateUrl: './bmx-form.component.html',
 	styleUrls: ['./bmx-form.component.scss']
 })
-export class BmxFormComponent implements OnInit {
+export class BmxFormComponent implements OnInit, BmxForm {
 
 	@Input()
 	public data: BmxFormData = {} as BmxFormData;

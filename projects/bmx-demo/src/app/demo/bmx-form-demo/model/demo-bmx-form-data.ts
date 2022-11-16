@@ -21,4 +21,15 @@ export class DemoBmxFormData {
 		],
 		DemoBmxFromButton.contactFormButton
 	);
+
+	public static glassForm: BmxFormData = new TupleBmxFormData(
+		'Contact Form',
+		'This is a demo contact form',
+		[
+			DemoBmxInput.nameInput,
+			DemoBmxInput.contactInput,
+			DemoBmxInput.passwordInput
+		],
+		DemoBmxFromButton.contactFormButton
+	);
 }

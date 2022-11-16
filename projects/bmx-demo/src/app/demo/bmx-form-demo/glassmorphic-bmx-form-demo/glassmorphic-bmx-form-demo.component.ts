@@ -9,7 +9,7 @@ import {DemoBmxFormData} from "../model/demo-bmx-form-data";
 })
 export class GlassmorphicBmxFormDemoComponent implements OnInit {
 
-	public contactForm: BmxFormData = DemoBmxFormData.contactForm;
+	public contactForm: BmxFormData = DemoBmxFormData.glassForm;
 
 	constructor() {
 	}

@@ -28,6 +28,7 @@ export class DemoBmxFormData {
 		[
 			DemoBmxInput.nameInput,
 			DemoBmxInput.contactInput,
+			DemoBmxInput.dateContentInput,
 			DemoBmxInput.passwordInput
 		],
 		DemoBmxFromButton.contactFormButton

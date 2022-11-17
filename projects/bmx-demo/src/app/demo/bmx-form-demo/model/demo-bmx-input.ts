@@ -25,6 +25,9 @@ import {
 import {
 	BmxPasswordInput
 } from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/content-input/bmx-password-input";
+import {
+	BmxDateInput
+} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/content-input/bmx-date-input";
 
 export class DemoBmxInput {
 
@@ -54,6 +57,17 @@ export class DemoBmxInput {
 		'password',
 		'',
 		'dsd87fhsgfysg'
+	);
+
+	public static dateContentInput: BmxContentInput = BmxDateInput.getInstance(
+		'Date',
+		'Choose a date',
+		'pdateassword',
+		{} as Date,
+		'13/08/99',
+		[
+			new BmxRequiredValidator()
+		]
 	);
 
 	public static dateInput: BmxDatepickerInput = BmxDefaultDatepickerInput.getInstance(

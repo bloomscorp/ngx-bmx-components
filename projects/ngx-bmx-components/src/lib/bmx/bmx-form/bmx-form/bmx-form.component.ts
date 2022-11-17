@@ -5,44 +5,24 @@ import {BmxInputLayoutContainer} from "../../bmx-layout/interface/input-layout/b
 import {BmxInputRowItem} from "../../bmx-layout/interface/input-layout/bmx-input-row-item";
 import {BmxFormButton} from "../../bmx-button/bmx-form-button/interface/bmx-form-button";
 import {BmxFormButtonType} from "../../bmx-button/bmx-form-button/interface/bmx-form-button-type";
+import {BmxForm} from "../interface/bmx-form";
+import {AbstractBmxForm} from "../model/abstract-bmx-form";
 
 @Component({
 	selector: 'bmx-form',
 	templateUrl: './bmx-form.component.html',
 	styleUrls: ['./bmx-form.component.scss']
 })
-export class BmxFormComponent implements OnInit {
+export class BmxFormComponent extends AbstractBmxForm implements OnInit {
 
 	@Input()
-	public data: BmxFormData = {} as BmxFormData;
-
-	public formGroup: FormGroup = {} as FormGroup;
-
-	public controls: {
-		[key: string]: AbstractControl;
-	} = {};
+	public override data: BmxFormData = {} as BmxFormData;
 
 	constructor() {
+		super();
 	}
 
 	ngOnInit(): void {
-
-		for (const containers of this.data.layoutContainers)
-			for (const input of containers.group.inputItems)
-				this.controls[input.inputItem.name] = new FormControl('');
-
-		this.formGroup = new FormGroup(this.controls);
-	}
-
-	public getFormControl(name: string): FormControl {
-		return <FormControl>this.controls[name];
-	}
-
-	public trackLayoutContainer(index: number, container: BmxInputLayoutContainer): number {
-		return container.id;
-	}
-
-	public trackInputElement(index: number, item: BmxInputRowItem): number {
-		return item.id;
+		super.init();
 	}
 }

@@ -9,6 +9,8 @@ import {BmxButtonRowLayout} from "../../bmx-layout/interface/button-layout/bmx-b
 import {BmxButtonRowItem} from "../../bmx-layout/interface/button-layout/bmx-button-row-item";
 import {BmxFormButton} from "../../bmx-button/bmx-form-button/interface/bmx-form-button";
 import {BmxFormButtonType} from "../../bmx-button/bmx-form-button/interface/bmx-form-button-type";
+import {BmxInputElement} from "../../bmx-input/interface/bmx-input-element-types";
+import {BmxInputRowItem} from "../../bmx-layout/interface/input-layout/bmx-input-row-item";
 
 export class SimpleBmxFormData extends AbstractBmxFormData {
 
@@ -45,6 +47,26 @@ export class SimpleBmxFormData extends AbstractBmxFormData {
 	public static readonly DEFAULT_BUTTON_LAYOUT_CONTAINER: SimpleBmxButtonLayoutContainer = new SimpleBmxButtonLayoutContainer(
 		SimpleBmxFormData.DEFAULT_BUTTON_ROW_LAYOUT
 	);
+
+	public static prepareInputRowLayout(elements: BmxInputElement[]): BmxInputRowLayout[] {
+
+		const rowLayouts: BmxInputRowLayout[] = [];
+
+		elements.forEach((element: BmxInputElement, index: number) => rowLayouts.push({
+			inputItems: [{
+				inputItem: element,
+				id: index,
+				flexXL: 100,
+				flexLG: 100,
+				flexMD: 100,
+				flexSM: 100,
+				flexXS: 100,
+				classList: []
+			}]
+		}));
+
+		return rowLayouts;
+	}
 
 	public constructor(
 		title: string,

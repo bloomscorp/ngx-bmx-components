@@ -16,5 +16,4 @@ export class BmxFormDemoComponent implements OnInit {
 
 	ngOnInit(): void {
 	}
-
 }

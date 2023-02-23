@@ -24,7 +24,13 @@ export class BmxSelectInputComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.data = <BmxSelectInput>this.bmxData;
-		setTimeout(() => this.formControl.setValue(this.data.value.value), 0);
+
+			setTimeout(() => {
+				if (this.data.type === 'single')
+					this.formControl.setValue("value" in this.data.value ? this.data.value.value : "")
+				if (this.data.type === 'multiple')
+					this.formControl.setValue(this.data.value)
+			}, 0);
 	}
 
 	public valueChanges(event: EventEmitter<string | number>): void {

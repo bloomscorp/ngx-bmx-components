@@ -23,7 +23,7 @@ export class AbstractBmxSelectInput implements BmxSelectInput {
 		public label: string,
 		public hint: string,
 		public name: string,
-		public value: BmxSelectInputItem,
+		public value: BmxSelectInputItem | BmxSelectInputItem[],
 		public onValueChange: (event: EventEmitter<string | number>) => void,
 		public placeholder: string,
 		public readOnly: boolean = false,

@@ -12,4 +12,15 @@ export class DemoBmxDropdown {
 		title: 'Other',
 		value: 'other'
 	}];
+
+	public static toppingsDropdown: BmxSelectInputItem[] = [{
+		title: 'Mushroom',
+		value: 'MUSHROOM'
+	}, {
+		title: 'Peperoni',
+		value: 'PEPERONI'
+	}, {
+		title: 'Onion',
+		value: 'ONION'
+	}];
 }

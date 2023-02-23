@@ -28,6 +28,10 @@ import {
 import {
 	BmxDateInput
 } from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/content-input/bmx-date-input";
+import {
+	BmxMultipleSelectInput
+} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/select-input/bmx-multiple-select-input";
+import {EventEmitter} from "@angular/core";
 
 export class DemoBmxInput {
 
@@ -91,6 +95,22 @@ export class DemoBmxInput {
 		},
 		'Male | Female | Other',
 		DemoBmxDropdown.genderDropdown
+	);
+
+	public static toppingsSelect: BmxSelectInput = BmxMultipleSelectInput.getInstance(
+		'Toppings',
+		'Select your toppings',
+		'toppings',
+		[{
+			title: '',
+			value: ''
+		}],
+		'Pepperoni | Mushroom | Onion',
+		DemoBmxDropdown.toppingsDropdown,
+		[],
+		(event: EventEmitter<string | number>) => {
+			console.log(`${event}`);
+		}
 	);
 
 	public static codeAutocomplete: BmxAutocompleteInput = BmxSimpleAutocompleteInput.getInstance(

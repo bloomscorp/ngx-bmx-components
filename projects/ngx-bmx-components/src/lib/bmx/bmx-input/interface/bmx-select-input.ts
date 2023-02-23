@@ -9,6 +9,6 @@ export interface BmxSelectInput extends BmxInput {
 	appearance: MatFormFieldAppearance;
 	type: BmxSelectInputType;
 	entries: BmxSelectInputExtendedItem[];
-	value: BmxSelectInputItem;
+	value: BmxSelectInputItem | BmxSelectInputItem[];
 	onValueChange: (event: EventEmitter<string | number>) => void;
 }

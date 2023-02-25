@@ -2,6 +2,7 @@
 	<mat-label>{{ data.label }}</mat-label>
 	<mat-select [formControl]="formControl"
 				(valueChange)="valueChanges($event)"
+				[(value)]="value"
 				[multiple]="data.type === 'multiple'">
 		<mat-option *ngFor="let item of data.entries; trackBy: trackItems"
 					[value]="item.value"

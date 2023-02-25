@@ -20,25 +20,36 @@ export class BmxSelectInputComponent implements OnInit {
 
 	public data: BmxSelectInput = {} as BmxSelectInput;
 
+	public value: any = "";
+
 	constructor() {
 	}
 
 	ngOnInit(): void {
 		this.data = <BmxSelectInput>this.bmxData;
-
-			setTimeout(() => {
-				if (this.data.type === 'single')
-					this.formControl.setValue("value" in this.data.value ? this.data.value.value : "")
-				if (this.data.type === 'multiple') {
-					let values = <BmxSelectInputItem[]>this.data.value;
-					this.formControl.setValue(values.map(value => value.value))
-				}
-
-			}, 0);
+		this.setValue();
+		this.formControl.valueChanges.subscribe(() => {
+			this.setValue()
+		})
 	}
 
 	public valueChanges(event: EventEmitter<string | number>): void {
 		this.data.onValueChange(event);
+	}
+
+	public setValue(): void {
+		setTimeout(() => {
+			if (this.data.type === 'single')
+			{
+				this.value = "value" in this.data.value ? this.data.value.value : "";
+			}
+			if (this.data.type === 'multiple') {
+				let values = <BmxSelectInputItem[]>this.data.value;
+				this.value = values.map(value => value.value);
+			}
+			this.formControl.setValue(this.value)
+
+		}, 0);
 	}
 
 	public trackItems(index: number, item: BmxSelectInputExtendedItem): number {

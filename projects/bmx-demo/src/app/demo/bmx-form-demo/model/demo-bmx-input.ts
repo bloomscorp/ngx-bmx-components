@@ -101,10 +101,16 @@ export class DemoBmxInput {
 		'Toppings',
 		'Select your toppings',
 		'toppings',
-		[{
-			title: '',
-			value: ''
-		}],
+		[
+			{
+				title: '',
+				value: 'MUSHROOM'
+			},
+			{
+				title: '',
+				value: 'ONION'
+			},
+		],
 		'Pepperoni | Mushroom | Onion',
 		DemoBmxDropdown.toppingsDropdown,
 		[],

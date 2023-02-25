@@ -3,6 +3,7 @@ import {BmxInputElement} from "../interface/bmx-input-element-types";
 import {FormControl} from "@angular/forms";
 import {BmxSelectInput} from "../interface/bmx-select-input";
 import {BmxSelectInputExtendedItem} from "../interface/bmx-select-input-extended-item";
+import {BmxSelectInputItem} from "../interface/bmx-select-input-item";
 
 @Component({
 	selector: 'bmx-select-input',
@@ -28,8 +29,11 @@ export class BmxSelectInputComponent implements OnInit {
 			setTimeout(() => {
 				if (this.data.type === 'single')
 					this.formControl.setValue("value" in this.data.value ? this.data.value.value : "")
-				if (this.data.type === 'multiple')
-					this.formControl.setValue(this.data.value)
+				if (this.data.type === 'multiple') {
+					let values = <BmxSelectInputItem[]>this.data.value;
+					this.formControl.setValue(values.map(value => value.value))
+				}
+
 			}, 0);
 	}
 

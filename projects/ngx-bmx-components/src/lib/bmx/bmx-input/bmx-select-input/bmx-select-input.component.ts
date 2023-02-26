@@ -4,6 +4,7 @@ import {FormControl} from "@angular/forms";
 import {BmxSelectInput} from "../interface/bmx-select-input";
 import {BmxSelectInputExtendedItem} from "../interface/bmx-select-input-extended-item";
 import {BmxSelectInputItem} from "../interface/bmx-select-input-item";
+import {MatSelectChange} from "@angular/material/select";
 
 @Component({
 	selector: 'bmx-select-input',
@@ -28,13 +29,13 @@ export class BmxSelectInputComponent implements OnInit {
 	ngOnInit(): void {
 		this.data = <BmxSelectInput>this.bmxData;
 		this.setValue();
-		this.formControl.valueChanges.subscribe(() => {
+		this.formControl.valueChanges.subscribe((value)=> {
 			this.setValue()
 		})
 	}
 
-	public valueChanges(event: EventEmitter<string | number>): void {
-		this.data.onValueChange(event);
+	public selectionChanges(event: MatSelectChange): void {
+		this.data.onValueChange(event.value);
 	}
 
 	public setValue(): void {
@@ -47,7 +48,6 @@ export class BmxSelectInputComponent implements OnInit {
 				let values = <BmxSelectInputItem[]>this.data.value;
 				this.value = values.map(value => value.value);
 			}
-			this.formControl.setValue(this.value)
 
 		}, 0);
 	}

@@ -94,7 +94,16 @@ export class DemoBmxInput {
 			value: 'male'
 		},
 		'Male | Female | Other',
-		DemoBmxDropdown.genderDropdown
+		DemoBmxDropdown.genderDropdown,
+		[],
+		(event: EventEmitter<string | number>) => {
+			DemoBmxInput.toppingsSelect.value = [
+				{
+					title: '',
+					value: 'PEPERONI'
+				},
+			]
+		}
 	);
 
 	public static toppingsSelect: BmxSelectInput = BmxMultipleSelectInput.getInstance(

@@ -123,33 +123,33 @@ export class DemoBmxInput {
 	);
 
 	public static codeAutocomplete: BmxAutocompleteInput = BmxSimpleAutocompleteInput.getInstance(
-		'code',
-		'Enter a country code',
-		'code',
+		'Recommended Product',
+		'Enter anything to get suggestions',
+		'sku',
 		{
-			title: '+91',
-			description: 'India\'s Country Code',
-			value: '+91'
+			title: '',
+			description: '',
+			value: ''
 		},
-		'+91 | +1 | +44',
+		'eg: 57190-BL',
 		[
 			{
 				image: 'https://s3-ap-south-1.amazonaws.com/delta-faucet-india-cdn/pendant/57190-CZ/images/000.jpg',
-				title: '+91',
-				description: 'India\'s Country Code',
-				value: '+91'
+				title: '57190-CZ',
+				description: 'LED Pendant Product',
+				value: '57190-CZ'
 			},
 			{
-				image: 'https://s3-ap-south-1.amazonaws.com/delta-faucet-india-cdn/pendant/57190-CZ/images/000.jpg',
-				title: '+1',
-				description: 'US\'s Country Code',
-				value: '+1'
+				image: 'https://s3-ap-south-1.amazonaws.com/delta-faucet-india-cdn/pendant/57190-BL/images/000.jpg',
+				title: '57190-BL',
+				description: 'LED Pendant Product with Matte Black finish',
+				value: '57190-BL'
 			},
 			{
-				image: 'https://s3-ap-south-1.amazonaws.com/delta-faucet-india-cdn/pendant/57190-CZ/images/000.jpg',
-				title: '+44',
-				description: 'UK\'s country code',
-				value: '+44'
+				image: 'https://s3-ap-south-1.amazonaws.com/delta-faucet-india-cdn/pendant/57190/images/000.jpg',
+				title: '57190',
+				description: 'LED Pendant Product with Polished Chrome finsih',
+				value: '57190'
 			}
 		]
 	);

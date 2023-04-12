@@ -9,7 +9,7 @@
 		   [matAutocomplete]="auto">
 	<mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
 		<mat-option *ngFor="let option of filteredOptions | async; trackBy: trackItems"
-					[value]="option.id">
+					[value]="option.value">
 			<section fxLayout="row"
 					 fxLayoutAlign="start center"
 					 class="r-search-card py-2 r-default-transition cursor-pointer">

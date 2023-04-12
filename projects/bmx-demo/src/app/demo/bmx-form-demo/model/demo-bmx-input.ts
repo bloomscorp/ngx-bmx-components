@@ -32,6 +32,7 @@ import {
 	BmxMultipleSelectInput
 } from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/select-input/bmx-multiple-select-input";
 import {EventEmitter} from "@angular/core";
+import {DemoBmxFormData} from "./demo-bmx-form-data";
 
 export class DemoBmxInput {
 
@@ -96,14 +97,7 @@ export class DemoBmxInput {
 		'Male | Female | Other',
 		DemoBmxDropdown.genderDropdown,
 		[],
-		(event: EventEmitter<string | number>) => {
-			DemoBmxInput.toppingsSelect.value = [
-				{
-					title: '',
-					value: 'PEPERONI'
-				},
-			]
-		}
+		(event: EventEmitter<string | number>) => {}
 	);
 
 	public static toppingsSelect: BmxSelectInput = BmxMultipleSelectInput.getInstance(

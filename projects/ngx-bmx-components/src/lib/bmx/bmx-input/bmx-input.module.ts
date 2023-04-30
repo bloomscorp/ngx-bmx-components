@@ -6,16 +6,18 @@ import {BmxSelectInputComponent} from './bmx-select-input/bmx-select-input.compo
 import {BmxTextAreaInputComponent} from './bmx-text-area-input/bmx-text-area-input.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import {BmxImageInputComponent} from './bmx-image-input/bmx-image-input.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {BmxNestedInputComponent} from './bmx-nested-input/bmx-nested-input.component';
-import { BmxAutocompleteInputComponent } from './bmx-autocomplete-input/bmx-autocomplete-input.component';
+import {BmxAutocompleteInputComponent} from './bmx-autocomplete-input/bmx-autocomplete-input.component';
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
-import { BmxDatepickerInputComponent } from './bmx-datepicker-input/bmx-datepicker-input.component';
+import {BmxDatepickerInputComponent} from './bmx-datepicker-input/bmx-datepicker-input.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
+import {BmxRichtextInputComponent} from './bmx-richtext-input/bmx-richtext-input.component';
+import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
 		BmxImageInputComponent,
 		BmxNestedInputComponent,
 		BmxAutocompleteInputComponent,
-		BmxDatepickerInputComponent
+		BmxDatepickerInputComponent,
+		BmxRichtextInputComponent
 	],
 	exports: [
 		BmxInputComponent
@@ -41,10 +44,12 @@ import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
 		FlexLayoutModule,
 		MatAutocompleteModule,
 		MatDatepickerModule,
-		MatNativeDateModule
+		MatNativeDateModule,
+		CKEditorModule,
+		FormsModule
 	],
 	providers: [
-		{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
+		{provide: MAT_DATE_LOCALE, useValue: 'en-GB'}
 	]
 })
 export class BmxInputModule {

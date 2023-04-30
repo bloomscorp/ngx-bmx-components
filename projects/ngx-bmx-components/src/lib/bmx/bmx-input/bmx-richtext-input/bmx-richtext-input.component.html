@@ -1,0 +1,15 @@
+<div class="bmx-input w-full text-sm">
+	<!--TODO: add label-->
+	<!--<label>{{ data.label }}</label>-->
+	<ckeditor [formControl]="formControl"
+			  [editor]="Editor"
+			  [config]="{ placeholder: data.placeholder }"
+			  [(ngModel)]="this.data.value"></ckeditor>
+	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
+	<mat-error *ngFor="let error of data.validators">
+		<ng-container *ngIf="(formControl.pristine || formControl.dirty)
+							&& formControl.hasError(error.errorCode)">
+			{{ error.message }}
+		</ng-container>
+	</mat-error>
+</div>

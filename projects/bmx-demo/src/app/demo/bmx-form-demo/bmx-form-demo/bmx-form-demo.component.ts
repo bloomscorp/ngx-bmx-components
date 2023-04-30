@@ -1,7 +1,6 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
 import {BmxFormData} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-form/interface/bmx-form-data";
 import {DemoBmxFormData} from "../model/demo-bmx-form-data";
-import {BmxSingleSelectInput} from "ngx-bmx-components";
 import {BmxSelectInput} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/interface/bmx-select-input";
 import {DemoBmxInput} from "../model/demo-bmx-input";
 import {BmxSelectInputItem} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/interface/bmx-select-input-item";
@@ -72,6 +71,8 @@ export class BmxFormDemoComponent implements OnInit {
 	}
 
 	public test(): void {
+
+		console.log(this.contactForm.layoutContainers[2].group.inputItems[1].inputItem);
 
 		let toppings: BmxSelectInput = <BmxSelectInput>this.contactForm.layoutContainers[2].group.inputItems[0].inputItem;
 

@@ -24,10 +24,11 @@ export class DemoBmxFormData {
 			DemoBmxInput.dateInput,
 			DemoBmxInput.genderSelect,
 			DemoBmxInput.toppingsSelect,
+			DemoBmxInput.richTextInput,
 			DemoBmxInput.codeAutocomplete,
 			DemoBmxInput.textAreaInput,
 			DemoBmxInput.imageInput,
-			DemoBmxInput.passwordInput
+			DemoBmxInput.passwordInput,
 		],
 		DemoBmxFromButton.contactFormButton
 	);
@@ -39,7 +40,8 @@ export class DemoBmxFormData {
 			DemoBmxInput.nameInput,
 			DemoBmxInput.contactInput,
 			DemoBmxInput.dateContentInput,
-			DemoBmxInput.passwordInput
+			DemoBmxInput.passwordInput,
+			DemoBmxInput.richTextInput,
 		],
 		DemoBmxFromButton.contactFormButton
 	);

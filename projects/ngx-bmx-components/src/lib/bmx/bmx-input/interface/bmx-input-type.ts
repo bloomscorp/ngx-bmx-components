@@ -5,6 +5,5 @@ export enum BmxInputType {
 	TEXT_AREA,
 	IMAGE,
 	AUTOCOMPLETE,
-	DATEPICKER,
-	RICHTEXT,
+	DATEPICKER
 }

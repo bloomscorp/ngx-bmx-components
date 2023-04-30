@@ -32,13 +32,6 @@ import {
 	BmxMultipleSelectInput
 } from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/select-input/bmx-multiple-select-input";
 import {EventEmitter} from "@angular/core";
-import {DemoBmxFormData} from "./demo-bmx-form-data";
-import {
-	BmxRichtextInput
-} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/interface/bmx-richtext-input";
-import {
-	BmxSimpleRichtextInput
-} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/richtext-input/bmx-simple-richtext-input";
 
 export class DemoBmxInput {
 
@@ -103,7 +96,14 @@ export class DemoBmxInput {
 		'Male | Female | Other',
 		DemoBmxDropdown.genderDropdown,
 		[],
-		(event: EventEmitter<string | number>) => {}
+		(event: EventEmitter<string | number>) => {
+			DemoBmxInput.toppingsSelect.value = [
+				{
+					title: '',
+					value: 'PEPERONI'
+				},
+			]
+		}
 	);
 
 	public static toppingsSelect: BmxSelectInput = BmxMultipleSelectInput.getInstance(
@@ -179,13 +179,4 @@ export class DemoBmxInput {
 		'000.jpg',
 		this.textAreaInput
 	);
-
-	public static richTextInput: BmxRichtextInput = BmxSimpleRichtextInput.getInstance(
-		'Richtext Editor',
-		'Enter your Description',
-		'richTextInput',
-		'',
-		'Important Information',
-		[]
-	)
 }

@@ -29,9 +29,9 @@ export class BmxSelectInputComponent implements OnInit {
 	ngOnInit(): void {
 		this.data = <BmxSelectInput>this.bmxData;
 		this.setValue();
-		this.formControl.valueChanges.subscribe((value)=> {
-			this.setValue()
-		})
+		// this.formControl.valueChanges.subscribe((value)=> {
+		// 	this.setValue()
+		// })
 	}
 
 	public selectionChanges(event: MatSelectChange): void {

@@ -19,11 +19,16 @@ export class BmxRichtextInputComponent implements OnInit {
 	@Input() public formControl: FormControl = {} as FormControl;
 	public data: BmxRichtextInput = {} as BmxRichtextInput;
 
+	editorConfig = {}
+
 	constructor() {
 	}
 
 	ngOnInit(): void {
 		this.data = <BmxRichtextInput>this.bmxData;
+		if (this.data.config) {
+			this.editorConfig = this.data.config;
+		}
 		setTimeout(() => this.formControl.setValue(this.data.value), 0);
 	}
 

@@ -186,6 +186,20 @@ export class DemoBmxInput {
 		'richTextInput',
 		'',
 		'Important Information',
-		[]
+		[],
+		{
+			toolbar: {
+				items: [
+					'undo', 'redo',
+					'|', 'heading',
+					'|', 'bold', 'italic',
+					'|', 'link',
+					'|', 'bulletedList', 'numberedList'
+				],
+				shouldNotGroupWhenFull: false
+			},
+			language: 'en',
+			placeholder: 'Hurrah it is working',
+		}
 	)
 }

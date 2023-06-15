@@ -3,7 +3,7 @@
 	<!--<label>{{ data.label }}</label>-->
 	<ckeditor [formControl]="formControl"
 			  [editor]="Editor"
-			  [config]="{ placeholder: data.placeholder }"
+			  [config]="editorConfig"
 			  [(ngModel)]="this.data.value"></ckeditor>
 	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
 	<mat-error *ngFor="let error of data.validators">

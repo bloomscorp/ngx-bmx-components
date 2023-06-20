@@ -39,6 +39,9 @@ import {
 import {
 	BmxSimpleRichtextInput
 } from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/richtext-input/bmx-simple-richtext-input";
+import {
+	BmxMultipleAutocompleteInput
+} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/autocomplete-input/bmx-multiple-autocomplete-input";
 
 export class DemoBmxInput {
 
@@ -136,6 +139,38 @@ export class DemoBmxInput {
 			title: '',
 			description: '',
 			value: ''
+		},
+		'eg: 57190-BL',
+		[
+			{
+				image: 'https://s3-ap-south-1.amazonaws.com/delta-faucet-india-cdn/pendant/57190-CZ/images/000.jpg',
+				title: '57190-CZ',
+				description: 'LED Pendant Product',
+				value: '57190-CZ'
+			},
+			{
+				image: 'https://s3-ap-south-1.amazonaws.com/delta-faucet-india-cdn/pendant/57190-BL/images/000.jpg',
+				title: '57190-BL',
+				description: 'LED Pendant Product with Matte Black finish',
+				value: '57190-BL'
+			},
+			{
+				image: 'https://s3-ap-south-1.amazonaws.com/delta-faucet-india-cdn/pendant/57190/images/000.jpg',
+				title: '57190',
+				description: 'LED Pendant Product with Polished Chrome finsih',
+				value: '57190'
+			}
+		]
+	);
+
+	public static multipleAutocomplete: BmxAutocompleteInput = BmxMultipleAutocompleteInput.getInstance(
+		'Recommended Product',
+		'Enter anything to get suggestions',
+		'skus',
+		{
+			title: '',
+			description: '',
+			value: '57190'
 		},
 		'eg: 57190-BL',
 		[

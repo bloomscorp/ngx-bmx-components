@@ -26,6 +26,7 @@ export class DemoBmxFormData {
 			DemoBmxInput.toppingsSelect,
 			DemoBmxInput.richTextInput,
 			DemoBmxInput.codeAutocomplete,
+			DemoBmxInput.multipleAutocomplete,
 			DemoBmxInput.textAreaInput,
 			DemoBmxInput.imageInput,
 			DemoBmxInput.passwordInput,

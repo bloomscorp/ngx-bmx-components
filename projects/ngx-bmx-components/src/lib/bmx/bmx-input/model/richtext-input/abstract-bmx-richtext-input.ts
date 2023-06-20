@@ -17,7 +17,10 @@ export class AbstractBmxRichtextInput implements BmxRichtextInput {
 		public value: string,
 		public placeholder: string,
 		public readOnly: boolean = false,
-		public validators: BmxValidator[] = []
+		public validators: BmxValidator[] = [],
+		public config?: {
+			[key: string]: any
+		}
 	) {
 	}
 }

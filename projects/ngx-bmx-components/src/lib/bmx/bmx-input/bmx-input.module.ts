@@ -18,6 +18,9 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
 import {BmxRichtextInputComponent} from './bmx-richtext-input/bmx-richtext-input.component';
 import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
+import { BmxMultipleAutocompleteInputComponent } from './bmx-multiple-autocomplete-input/bmx-multiple-autocomplete-input.component';
+import {MatChipsModule} from "@angular/material/chips";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -30,7 +33,8 @@ import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
 		BmxNestedInputComponent,
 		BmxAutocompleteInputComponent,
 		BmxDatepickerInputComponent,
-		BmxRichtextInputComponent
+		BmxRichtextInputComponent,
+  BmxMultipleAutocompleteInputComponent,
 	],
 	exports: [
 		BmxInputComponent
@@ -46,7 +50,9 @@ import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
 		MatDatepickerModule,
 		MatNativeDateModule,
 		CKEditorModule,
-		FormsModule
+		FormsModule,
+		MatChipsModule,
+		MatIconModule
 	],
 	providers: [
 		{provide: MAT_DATE_LOCALE, useValue: 'en-GB'}

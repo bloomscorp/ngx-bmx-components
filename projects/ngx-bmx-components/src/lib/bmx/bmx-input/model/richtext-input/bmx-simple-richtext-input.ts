@@ -13,7 +13,10 @@ export class BmxSimpleRichtextInput extends AbstractBmxRichtextInput {
 		value: string,
 		placeholder: string,
 		readOnly: boolean = false,
-		validators: BmxValidator[] = []
+		validators: BmxValidator[] = [],
+		config?: {
+			[key: string]: any
+		}
 	) {
 		super(
 			appearance,
@@ -24,7 +27,8 @@ export class BmxSimpleRichtextInput extends AbstractBmxRichtextInput {
 			value,
 			placeholder,
 			readOnly,
-			validators
+			validators,
+			config
 		);
 	}
 
@@ -34,7 +38,8 @@ export class BmxSimpleRichtextInput extends AbstractBmxRichtextInput {
 		name: string,
 		value: string = '',
 		placeholder: string,
-		validators: BmxValidator[] = []
+		validators: BmxValidator[] = [],
+		config: any = undefined
 	): BmxSimpleRichtextInput {
 
 		return new BmxSimpleRichtextInput(
@@ -46,7 +51,8 @@ export class BmxSimpleRichtextInput extends AbstractBmxRichtextInput {
 			value,
 			placeholder,
 			false,
-			validators
+			validators,
+			config
 		);
 	}
 }

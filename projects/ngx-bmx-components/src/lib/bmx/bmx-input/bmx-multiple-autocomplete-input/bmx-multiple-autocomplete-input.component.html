@@ -1,0 +1,54 @@
+<mat-form-field class="bmx-input bmx-autocomplete w-full text-sm" [appearance]="data.appearance">
+	<mat-label>{{ data.label }}</mat-label>
+	<mat-chip-list #chipList aria-label="Fruit selection">
+		<mat-chip
+			*ngFor="let chip of autoChips"
+			(removed)="remove(chip)">
+			{{chip}}
+			<button matChipRemove>
+				<mat-icon>cancel</mat-icon>
+			</button>
+		</mat-chip>
+		<input #chipInput
+			   type="text"
+			   [name]="data.name"
+			   placeholder="{{ data.placeholder }}"
+			   [attr.aria-label]="data.label"
+			   matInput
+			   [formControl]="formControl"
+			   [matAutocomplete]="auto"
+			   [matChipInputFor]="chipList"
+			   [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+	</mat-chip-list>
+
+	<mat-autocomplete autoActiveFirstOption
+					  #auto="matAutocomplete"
+					  (optionSelected)="selected($event)">
+		<mat-option *ngFor="let option of filteredOptions | async; trackBy: trackItems"
+					[value]="option.value">
+			<section fxLayout="row"
+					 fxLayoutAlign="start center"
+					 class="r-search-card py-2 r-default-transition cursor-pointer">
+				<img *ngIf="option.image"
+					 [src]="option.image"
+					 class="r-sac-icon r-default-transition" alt="bmx autocomplete dp">
+				<div class="r-sac-info md:ml-0.5">
+					<h1 class="font-bold text-sm py-0.5 capitalize">
+						{{option.title}}
+					</h1>
+					<p *ngIf="option.description"
+					   class="text-sm text-gray-600 capitalize">
+						{{option.description}}
+					</p>
+				</div>
+			</section>
+		</mat-option>
+	</mat-autocomplete>
+	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
+	<mat-error *ngFor="let error of data.validators">
+		<ng-container *ngIf="(formControl.pristine || formControl.dirty)
+							&& formControl.hasError(error.errorCode)">
+			{{ error.message }}
+		</ng-container>
+	</mat-error>
+</mat-form-field>

@@ -42,6 +42,7 @@ import {
 import {
 	BmxMultipleAutocompleteInput
 } from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/autocomplete-input/bmx-multiple-autocomplete-input";
+import {BmxMaxLengthValidator} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-input/model/validators/bmx-max-length-validator";
 
 export class DemoBmxInput {
 
@@ -204,6 +205,7 @@ export class DemoBmxInput {
 		'Enter some text',
 		[
 			DemoBmxValidator.nameMinLength,
+			new BmxMaxLengthValidator(1000, true),
 			new BmxRequiredValidator()
 		],
 		4

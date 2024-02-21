@@ -18,7 +18,6 @@ export class BmxContentInputComponent implements OnInit {
 	public formControl: UntypedFormControl = {} as UntypedFormControl;
 
 	public data: BmxContentInput = {} as BmxContentInput;
-
 	public showCharacterCount: boolean = false;
 	public characterCount: number = 0;
 

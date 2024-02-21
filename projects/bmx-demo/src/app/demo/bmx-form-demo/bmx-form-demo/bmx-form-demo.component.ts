@@ -17,13 +17,6 @@ export class BmxFormDemoComponent implements OnInit {
 	public testChange: (event: EventEmitter<string | number>) => void = (event: EventEmitter<string | number>) => {
 
 		console.log('on-value-changes-test');
-		// DemoBmxFormData.updateToppings(null);
-		// DemoBmxInput.toppingsSelect.value = [
-		// 	{
-		// 		title: '',
-		// 		value: 'PEPERONI'
-		// 	},
-		// ]
 
 		let gender: BmxSelectInput = <BmxSelectInput>this.contactForm.layoutContainers[1].group.inputItems[1].inputItem;
 		let toppings: BmxSelectInput = <BmxSelectInput>this.contactForm.layoutContainers[2].group.inputItems[0].inputItem;

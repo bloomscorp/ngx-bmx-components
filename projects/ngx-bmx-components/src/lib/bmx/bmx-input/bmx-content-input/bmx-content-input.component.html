@@ -7,6 +7,7 @@
 		   [placeholder]="data.placeholder"
 		   [readonly]="data.readOnly">
 	<mat-hint *ngIf="data.hint">{{ data.hint }}</mat-hint>
+	<mat-hint *ngIf="showCharacterCount" align="end">{{ formControl.value.length }} / {{ characterCount }}</mat-hint>
 	<mat-error *ngFor="let error of data.validators">
 		<ng-container *ngIf="(formControl.pristine || formControl.dirty)
 							&& formControl.hasError(error.errorCode)">

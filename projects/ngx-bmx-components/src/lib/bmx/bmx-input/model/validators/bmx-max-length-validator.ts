@@ -5,6 +5,7 @@ export class BmxMaxLengthValidator implements BmxValidator {
 
 	public constructor(
 		public maxlength: number,
+		public showCharacterCount: boolean = false,
 		public errorCode: string = 'maxlength',
 		public message: string = `This field can be max ${maxlength} characters long!`,
 		public validator: ((control: AbstractControl) => (ValidationErrors | null)) = Validators.maxLength(maxlength)

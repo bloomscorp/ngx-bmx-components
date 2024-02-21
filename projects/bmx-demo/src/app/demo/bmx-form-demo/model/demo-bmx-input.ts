@@ -53,7 +53,8 @@ export class DemoBmxInput {
 		'Joe Billy',
 		[
 			DemoBmxValidator.required,
-			DemoBmxValidator.nameMinLength
+			DemoBmxValidator.nameMinLength,
+			DemoBmxValidator.nameMaxLength
 		]
 	);
 

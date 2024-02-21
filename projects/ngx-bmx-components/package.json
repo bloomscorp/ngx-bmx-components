@@ -9,10 +9,10 @@
 	},
 	"license": "MIT",
 	"peerDependencies": {
-		"@angular/common": "^13.3.0",
-		"@angular/core": "^13.3.0",
+		"@angular/common": "^14.3.0",
+		"@angular/core": "^14.3.0",
 		"bmx-pastebox": "^1.0.6",
-		"@angular/flex-layout": "^13.0.0-beta.38",
+		"@angular/flex-layout": "^14.0.0-beta.41",
 		"tailwindcss": "^3.0.24",
 		"@tailwindcss/aspect-ratio": "^0.4.0",
 		"@tailwindcss/line-clamp": "^0.4.0",

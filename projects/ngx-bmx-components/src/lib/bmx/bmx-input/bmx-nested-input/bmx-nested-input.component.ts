@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BmxImageInputElement} from "../interface/bmx-input-element-types";
-import {FormControl} from "@angular/forms";
+import {UntypedFormControl} from "@angular/forms";
 
 @Component({
   selector: 'bmx-nested-input',
@@ -13,7 +13,7 @@ export class BmxNestedInputComponent implements OnInit {
 	public data: BmxImageInputElement = {} as BmxImageInputElement;
 
 	@Input()
-	public formControl: FormControl = {} as FormControl;
+	public formControl: UntypedFormControl = {} as UntypedFormControl;
 
 	constructor() {
 	}

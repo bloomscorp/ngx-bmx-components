@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BmxFormButton} from "../interface/bmx-form-button";
-import {FormGroup} from "@angular/forms";
+import {UntypedFormGroup} from "@angular/forms";
 import {BmxButtonElement} from "../../interface/bmx-button-element-types";
 
 @Component({
@@ -14,7 +14,7 @@ export class BmxWarnFormButtonComponent implements OnInit {
 	public data: BmxFormButton = {} as BmxFormButton;
 
 	@Input()
-	public formGroup: FormGroup = {} as FormGroup;
+	public formGroup: UntypedFormGroup = {} as UntypedFormGroup;
 
 	constructor() {
 	}

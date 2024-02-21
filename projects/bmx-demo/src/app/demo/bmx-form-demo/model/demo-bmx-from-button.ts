@@ -4,14 +4,14 @@ import {
 import {BmxButtonRowLayout} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-layout/interface/button-layout/bmx-button-row-layout";
 import {BmxButtonRowItem} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-layout/interface/button-layout/bmx-button-row-item";
 import {BmxFormButton} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-button/bmx-form-button/interface/bmx-form-button";
-import {FormGroup} from "@angular/forms";
+import {UntypedFormGroup} from "@angular/forms";
 import {BmxFormButtonType} from "../../../../../../ngx-bmx-components/src/lib/bmx/bmx-button/bmx-form-button/interface/bmx-form-button-type";
 
 export class DemoBmxFromButton {
 
 	public static readonly DEFAULT_BUTTON: BmxFormButton = {
 		title: 'draft',
-		onSubmit: (formGroup: FormGroup) => console.log(formGroup.value),
+		onSubmit: (formGroup: UntypedFormGroup) => console.log(formGroup.value),
 		inputType: BmxFormButtonType.CONFIRM,
 		validateBeforeSubmit: true
 	};

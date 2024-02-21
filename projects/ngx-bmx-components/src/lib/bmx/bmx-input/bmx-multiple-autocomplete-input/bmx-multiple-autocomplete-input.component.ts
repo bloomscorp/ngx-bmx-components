@@ -1,6 +1,6 @@
 import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {BmxInputElement} from "../interface/bmx-input-element-types";
-import {FormControl} from "@angular/forms";
+import {UntypedFormControl} from "@angular/forms";
 import {BmxAutocompleteInput} from "../interface/bmx-autocomplete-input";
 import {Observable} from "rxjs";
 import {BmxAutocompleteExtendedItem} from "../interface/bmx-autocomplete-extended-item";
@@ -25,7 +25,7 @@ export class BmxMultipleAutocompleteInputComponent implements OnInit {
 	public bmxData: BmxInputElement = {} as BmxInputElement;
 
 	@Input()
-	public formControl: FormControl = {} as FormControl;
+	public formControl: UntypedFormControl = {} as UntypedFormControl;
 
 	public autoChips: string[] = [];
 	public data: BmxAutocompleteInput = {} as BmxAutocompleteInput;

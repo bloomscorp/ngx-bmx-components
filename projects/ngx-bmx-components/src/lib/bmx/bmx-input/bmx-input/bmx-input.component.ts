@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormControl} from "@angular/forms";
+import {UntypedFormControl} from "@angular/forms";
 import {BmxInputElement} from "../interface/bmx-input-element-types";
 
 @Component({
@@ -13,7 +13,7 @@ export class BmxInputComponent implements OnInit {
 	public data: BmxInputElement = {} as BmxInputElement;
 
 	@Input()
-	public formControl: FormControl = {} as FormControl;
+	public formControl: UntypedFormControl = {} as UntypedFormControl;
 
 	constructor() {
 	}

@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit} from '@angular/core';
 import {BmxInputElement} from "../interface/bmx-input-element-types";
-import {FormControl} from "@angular/forms";
+import {UntypedFormControl} from "@angular/forms";
 import {BmxSelectInput} from "../interface/bmx-select-input";
 import {BmxSelectInputExtendedItem} from "../interface/bmx-select-input-extended-item";
 import {BmxSelectInputItem} from "../interface/bmx-select-input-item";
@@ -17,7 +17,7 @@ export class BmxSelectInputComponent implements OnInit {
 	public bmxData: BmxInputElement = {} as BmxInputElement;
 
 	@Input()
-	public formControl: FormControl = {} as FormControl;
+	public formControl: UntypedFormControl = {} as UntypedFormControl;
 
 	public data: BmxSelectInput = {} as BmxSelectInput;
 

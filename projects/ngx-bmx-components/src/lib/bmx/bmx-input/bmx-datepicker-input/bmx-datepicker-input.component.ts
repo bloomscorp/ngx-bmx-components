@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BmxInputElement} from "../interface/bmx-input-element-types";
-import {FormControl} from "@angular/forms";
+import {UntypedFormControl} from "@angular/forms";
 import {BmxContentInput} from "../interface/bmx-content-input";
 import {BmxDatepickerInput} from "../interface/bmx-datepicker-input";
 
@@ -15,7 +15,7 @@ export class BmxDatepickerInputComponent implements OnInit {
 	public bmxData: BmxInputElement = {} as BmxInputElement;
 
 	@Input()
-	public formControl: FormControl = {} as FormControl;
+	public formControl: UntypedFormControl = {} as UntypedFormControl;
 
 	public data: BmxDatepickerInput = {} as BmxDatepickerInput;
 

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {BmxInputElement} from "../interface/bmx-input-element-types";
-import {FormControl} from "@angular/forms";
+import {UntypedFormControl} from "@angular/forms";
 import {BmxTextAreaInput} from "../interface/bmx-text-area-input";
 import {BmxRichtextInput} from "../interface/bmx-richtext-input";
 import {BmxSelectInput} from "../interface/bmx-select-input";
@@ -16,7 +16,7 @@ export class BmxRichtextInputComponent implements OnInit {
 	public Editor = ClassicEditor;
 
 	@Input() public bmxData: BmxInputElement = {} as BmxInputElement;
-	@Input() public formControl: FormControl = {} as FormControl;
+	@Input() public formControl: UntypedFormControl = {} as UntypedFormControl;
 	public data: BmxRichtextInput = {} as BmxRichtextInput;
 
 	editorConfig = {}

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BmxInputElement} from "../../../../bmx-input/interface/bmx-input-element-types";
-import {FormControl} from "@angular/forms";
+import {UntypedFormControl} from "@angular/forms";
 
 @Component({
 	selector: 'bmx-input-glassmorphic',
@@ -13,7 +13,7 @@ export class BmxInputGlassmorphicComponent implements OnInit {
 	public data: BmxInputElement = {} as BmxInputElement;
 
 	@Input()
-	public formControl: FormControl = {} as FormControl;
+	public formControl: UntypedFormControl = {} as UntypedFormControl;
 
 	constructor() {
 	}

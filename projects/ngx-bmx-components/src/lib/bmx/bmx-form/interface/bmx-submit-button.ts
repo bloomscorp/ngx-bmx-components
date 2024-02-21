@@ -9,11 +9,11 @@
  * during compilation, the TailwindCSS classes shall be found by the preprocessor to be included during build time.
  * @member onSubmit - A method / function that returns void and is called during the button press with (submit) event
  */
-import {FormGroup} from "@angular/forms";
+import {UntypedFormGroup} from "@angular/forms";
 
 export interface BmxSubmitButton {
 	title: string;
 	classList: string[];
-	onSubmit: (formGroup: FormGroup) => void;
+	onSubmit: (formGroup: UntypedFormGroup) => void;
 	validateBeforeSubmit: boolean;
 }

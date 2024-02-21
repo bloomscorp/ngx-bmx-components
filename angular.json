@@ -1,171 +1,180 @@
 {
-	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-	"version": 1,
-	"newProjectRoot": "projects",
-	"projects": {
-		"ngx-bmx-components": {
-			"projectType": "library",
-			"schematics": {
-				"@schematics/angular:component": {
-					"style": "scss"
-				}
-			},
-			"root": "projects/ngx-bmx-components",
-			"sourceRoot": "projects/ngx-bmx-components/src",
-			"prefix": "",
-			"architect": {
-				"build": {
-					"builder": "@angular-devkit/build-angular:ng-packagr",
-					"options": {
-						"project": "projects/ngx-bmx-components/ng-package.json"
-					},
-					"configurations": {
-						"production": {
-							"tsConfig": "projects/ngx-bmx-components/tsconfig.lib.prod.json"
-						},
-						"development": {
-							"tsConfig": "projects/ngx-bmx-components/tsconfig.lib.json"
-						}
-					},
-					"defaultConfiguration": "production"
-				},
-				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
-					"options": {
-						"main": "projects/ngx-bmx-components/src/test.ts",
-						"tsConfig": "projects/ngx-bmx-components/tsconfig.spec.json",
-						"karmaConfig": "projects/ngx-bmx-components/karma.conf.js"
-					}
-				},
-				"lint": {
-					"builder": "@angular-eslint/builder:lint",
-					"options": {
-						"lintFilePatterns": [
-							"projects/ngx-bmx-components/**/*.ts",
-							"projects/ngx-bmx-components/**/*.html"
-						]
-					}
-				}
-			}
-		},
-		"bmx-demo": {
-			"projectType": "application",
-			"schematics": {
-				"@schematics/angular:component": {
-					"style": "scss"
-				},
-				"@schematics/angular:application": {
-					"strict": true
-				}
-			},
-			"root": "projects/bmx-demo",
-			"sourceRoot": "projects/bmx-demo/src",
-			"prefix": "app",
-			"architect": {
-				"build": {
-					"builder": "@angular-builders/custom-webpack:browser",
-					"options": {
-						"customWebpackConfig": {
-							"path": "./webpack.config.js"
-						},
-						"outputPath": "dist/bmx-demo",
-						"index": "projects/bmx-demo/src/index.html",
-						"main": "projects/bmx-demo/src/main.ts",
-						"polyfills": "projects/bmx-demo/src/polyfills.ts",
-						"tsConfig": "projects/bmx-demo/tsconfig.app.json",
-						"inlineStyleLanguage": "scss",
-						"assets": [
-							"projects/bmx-demo/src/favicon.ico",
-							"projects/bmx-demo/src/assets"
-						],
-						"styles": [
-							"projects/bmx-demo/src/styles.scss"
-						],
-						"scripts": []
-					},
-					"configurations": {
-						"production": {
-							"budgets": [
-								{
-									"type": "initial",
-									"maximumWarning": "500kb",
-									"maximumError": "1mb"
-								},
-								{
-									"type": "anyComponentStyle",
-									"maximumWarning": "2kb",
-									"maximumError": "4kb"
-								}
-							],
-							"fileReplacements": [
-								{
-									"replace": "projects/bmx-demo/src/environments/environment.ts",
-									"with": "projects/bmx-demo/src/environments/environment.prod.ts"
-								}
-							],
-							"outputHashing": "all"
-						},
-						"development": {
-							"buildOptimizer": false,
-							"optimization": false,
-							"vendorChunk": true,
-							"extractLicenses": false,
-							"sourceMap": true,
-							"namedChunks": true
-						}
-					},
-					"defaultConfiguration": "production"
-				},
-				"serve": {
-					"builder": "@angular-builders/custom-webpack:dev-server",
-					"configurations": {
-						"production": {
-							"browserTarget": "bmx-demo:build:production"
-						},
-						"development": {
-							"browserTarget": "bmx-demo:build:development"
-						}
-					},
-					"defaultConfiguration": "development"
-				},
-				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"browserTarget": "bmx-demo:build"
-					}
-				},
-				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
-					"options": {
-						"main": "projects/bmx-demo/src/test.ts",
-						"polyfills": "projects/bmx-demo/src/polyfills.ts",
-						"tsConfig": "projects/bmx-demo/tsconfig.spec.json",
-						"karmaConfig": "projects/bmx-demo/karma.conf.js",
-						"inlineStyleLanguage": "scss",
-						"assets": [
-							"projects/bmx-demo/src/favicon.ico",
-							"projects/bmx-demo/src/assets"
-						],
-						"styles": [
-							"projects/bmx-demo/src/styles.scss"
-						],
-						"scripts": []
-					}
-				},
-				"lint": {
-					"builder": "@angular-eslint/builder:lint",
-					"options": {
-						"lintFilePatterns": [
-							"projects/bmx-demo/**/*.ts",
-							"projects/bmx-demo/**/*.html"
-						]
-					}
-				}
-			}
-		}
-	},
-	"defaultProject": "ngx-bmx-components",
-	"cli": {
-		"defaultCollection": "@angular-eslint/schematics"
-	}
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-bmx-components": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ngx-bmx-components",
+      "sourceRoot": "projects/ngx-bmx-components/src",
+      "prefix": "",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-bmx-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-bmx-components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-bmx-components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-bmx-components/src/test.ts",
+            "tsConfig": "projects/ngx-bmx-components/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-bmx-components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-bmx-components/**/*.ts",
+              "projects/ngx-bmx-components/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "bmx-demo": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/bmx-demo",
+      "sourceRoot": "projects/bmx-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
+            "outputPath": "dist/bmx-demo",
+            "index": "projects/bmx-demo/src/index.html",
+            "main": "projects/bmx-demo/src/main.ts",
+            "polyfills": "projects/bmx-demo/src/polyfills.ts",
+            "tsConfig": "projects/bmx-demo/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/bmx-demo/src/favicon.ico",
+              "projects/bmx-demo/src/assets"
+            ],
+            "styles": [
+              "projects/bmx-demo/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/bmx-demo/src/environments/environment.ts",
+                  "with": "projects/bmx-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "bmx-demo:build:production"
+            },
+            "development": {
+              "browserTarget": "bmx-demo:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "bmx-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bmx-demo/src/test.ts",
+            "polyfills": "projects/bmx-demo/src/polyfills.ts",
+            "tsConfig": "projects/bmx-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/bmx-demo/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/bmx-demo/src/favicon.ico",
+              "projects/bmx-demo/src/assets"
+            ],
+            "styles": [
+              "projects/bmx-demo/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/bmx-demo/**/*.ts",
+              "projects/bmx-demo/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
+  },
+  "schematics": {
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
+    }
+  }
 }
